@@ -1,0 +1,106 @@
+/*Fuente de letras*/
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+/*font-family: 'Rock Salt', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Rock+Salt&display=swap');
+/*font-family: 'Gloria Hallelujah', cursive;*/
+
+
+/*Paleta de colores: https://colorhunt.co/palette/232855215b635fcc9caaffc7
+#232855 - rgb(35, 40, 85)
+#215B63 - rgb(33, 91, 99)
+#5FCC9C - rgb(95, 204, 156)
+#AAFFC7 - rgb(170, 255, 199)
+*/
+:root {
+    --color-oscuro1: #232855;
+    --color-oscuro2: #215B63;
+    --color-claro1: #5FCC9C;
+    --color-claro2: #AAFFC7;
+}
+
+/* html y body para que manejar "rem" sea mas sencillo */
+/* 1rem = 10px*/
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    background-color: var(--color-oscuro1);
+}
+
+.titulo{
+    text-align: center;
+}
+
+.autor span{
+    font-size: 2rem;
+}
+
+p{
+    text-align: justify;
+}
+
+p span{
+    font-weight: bold;
+}
+
+h1, h2, h3{
+    font-family: 'Rock Salt', cursive;
+    /*text-transform: uppercase;*/
+}
+
+/*Estilos del main*/
+main{
+    background-color: var(--color-claro1);
+    color: var(--color-oscuro2);
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+main section{
+    background-color: var(--color-oscuro2);
+    color: var(--color-claro2);
+}
+
+main section a{
+    color: var(--color-claro2);
+}
+
+main img{
+    width: 30rem;
+}
+
+/*Estilos del header y footer*/
+
+header{
+    background-image: url(../medios/images/fondo_header.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-shadow: 4px 4px 8px rgba(68,73,65,1);
+}
+
+header li{
+    list-style: none;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 1rem; 
+}
+header li{
+    display: inline;
+}
+
+header,footer{
+    background-color: var(--color-oscuro1);
+    color: white;
+    font-family: 'Rock Salt', cursive;
+}
+
+/*Para los ejectos de la barra de navegacon*/
+header a:hover{
+    background-color: red;
+    color: black;
+}
