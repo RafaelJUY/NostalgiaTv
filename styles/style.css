@@ -1,8 +1,8 @@
 /*Fuente de letras*/
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 /*font-family: 'Rock Salt', cursive;*/
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Rock+Salt&display=swap');
-/*font-family: 'Gloria Hallelujah', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+/*font-family: 'Fira Sans', sans-serif;*/
 
 
 /*Paleta de colores: https://colorhunt.co/palette/232855215b635fcc9caaffc7
@@ -16,6 +16,8 @@
     --color-oscuro2: #215B63;
     --color-claro1: #5FCC9C;
     --color-claro2: #AAFFC7;
+    --fuente-titulo: 'Rock Salt', cursive;
+    --fuente-normal: 'Fira Sans', sans-serif;;
 }
 
 /* html y body para que manejar "rem" sea mas sencillo */
@@ -25,9 +27,97 @@ html{
 }
 body{
     font-size: 16px;
-    background-color: var(--color-oscuro1);
+    background-color: var(--color-claro1);
 }
 
+/* ESTILOS DEL HEADER */
+.header{
+    font-family: var(--fuente-titulo);
+    /* background-image: url(../medios/images/fondo_header.PNG); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    background-color: var(--color-oscuro1);
+}
+.header__logo{
+    text-align: left;
+    display: inline;
+    padding: 2rem;
+}
+.header__h1{
+    text-align: center;
+    font-size: 4rem;
+    display: inline;
+}
+.header__nav,nav{
+    background-color: var(--color-oscuro2);
+}
+.nav__ul{
+    padding: 1rem 10rem;
+    text-align: center;
+}
+.nav__li{
+    list-style: none;
+    display: inline;
+}
+.nav__a{
+    color: white;
+    text-shadow: 4px 4px 8px rgba(68,73,65,1);
+    text-decoration: none;
+    margin: 3rem; 
+}
+.nav__a:hover{
+    background-color: var(--color-claro1);
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* ESTILOS DEL MAIN */
+.main{
+    background-color: var(--color-claro1);
+    margin: 0rem 15rem;
+}
+.main__h2,.main__h3{
+    font-family: var(--fuente-titulo);
+}
+.main__logo{
+    width: 40rem;
+}
+.main__p{
+    font-family: var(--fuente-normal);
+    font-size: 2rem;
+    text-align: justify;
+    line-height: 3rem;
+}
+
+
+
+
+
+
+/* ESTILOS DEL FOOTER */
+.footer{
+    font-family: var(--fuente-titulo);
+    background-color: var(--color-oscuro1);
+    color: white;
+}
+.footer__p{
+    font-size: 1.2rem;
+}
+.footer__p span{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.footer__a{
+}
+
+/* 
 .titulo{
     text-align: center;
 }
@@ -46,10 +136,10 @@ p span{
 
 h1, h2, h3{
     font-family: 'Rock Salt', cursive;
-    /*text-transform: uppercase;*/
+    /*text-transform: uppercase;
 }
 
-/*Estilos del main*/
+/*Estilos del main
 main{
     background-color: var(--color-claro1);
     color: var(--color-oscuro2);
@@ -69,7 +159,8 @@ main img{
     width: 30rem;
 }
 
-/*Estilos del header y footer*/
+/*Estilos del header y footer
+
 
 header{
     background-image: url(../medios/images/fondo_header.PNG);
@@ -99,8 +190,9 @@ header,footer{
     font-family: 'Rock Salt', cursive;
 }
 
-/*Para los ejectos de la barra de navegacon*/
+/*Para los ejectos de la barra de navegacon
 header a:hover{
     background-color: red;
     color: black;
 }
+*/
