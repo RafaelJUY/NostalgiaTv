@@ -39,6 +39,8 @@ body{
     background-size: cover;
     color: white;
     background-color: var(--color-oscuro1);
+    position: sticky;
+    top: 0rem;
 }
 .header__logo{
     text-align: left;
@@ -50,9 +52,10 @@ body{
     font-size: 4rem;
     display: inline;
 }
-.header__nav,nav{
+.header__nav, .nav{
     background-color: var(--color-claro1);
 }
+
 .nav__ul{
     padding: 1.1rem 0rem;
     text-align: center;
@@ -63,7 +66,7 @@ body{
 }
 .nav__a{
     color: white;
-    text-shadow: 4px 4px 8px rgba(68,73,65,1);
+    text-shadow: 0px 0px 6px rgba(0,0,0,1);
     text-decoration: none;
     margin: 3rem; 
 }
@@ -71,9 +74,10 @@ body{
     text-decoration: underline;
 }
 .nav__a:hover{
-    background-color: var(--color-claro1);
+    /* background-color: var(--color-claro2); */
     color: black;
     font-weight: bold;
+    text-shadow: none;
 }
 
 
@@ -85,9 +89,11 @@ body{
 .main{
     background-color: var(--color-claro1);
     margin: 0rem 15rem;
+    padding: 1rem 5rem;
 }
 .main__h2,.main__h3{
     font-family: var(--fuente-titulo);
+    text-align: center;
 }
 .main__logo{
     width: 40rem;
