@@ -41,10 +41,6 @@ body{
 }
 
 /* ESTILOS DEL HEADER */
-.header div{
-    height: 10rem;
-}
-
 .header{
     font-family: var(--fuente-titulo);
     /* background-image: url(../medios/images/fondo_header.PNG); */
@@ -56,34 +52,46 @@ body{
     position: sticky;
     top: 0rem;
 }
+.header__cabecera{
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
 .header__logo{
     text-align: left;
-    display: inline;
-    padding: 2rem;
+    /* display: inline; */
+    margin: 0rem 2rem;
 }
 .header__h1{
-    text-align: center;
+    /* text-align: center; */
     font-size: 4rem;
-    display: inline;
+    /* display: inline; */
 }
 .header__nav, .nav{
     background-color: var(--color-nav);
     font-size: 2rem;
+    /* flex: 1; Ocupa todo el espacio disponible en el header */
 }
 
 .nav__ul{
-    padding: 1.1rem 0rem;
+    padding: 1rem 0rem;
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
 }
+
 .nav__li{
     list-style: none;
-    display: inline;
+    /* display: inline; */
 }
 .nav__a{
     color: white;
     text-shadow: 0px 0px 6px rgba(0,0,0,1);
     text-decoration: none;
-    margin: 3rem; 
+    /* margin: 3rem;  */
 }
 .nav__a--actual{
     text-decoration: underline;
@@ -113,7 +121,7 @@ body{
 .main__h2,.main__h3{
     font-family: var(--fuente-titulo);
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin: 1rem;
 }
 .main__logo{
@@ -147,16 +155,19 @@ body{
     font-family: var(--fuente-titulo);
     background-color: var(--color-oscuro1);
     color: white;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .footer__p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 .footer__p span{
     font-weight: bold;
 }
 
-/* 
-.footer__a{
+.footer__p, .footer__a{
+    margin: 0rem 2rem;
 } 
-*/
