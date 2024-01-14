@@ -33,6 +33,7 @@ html{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /*Para que respeque el tamaño del padre*/
 }
 
 /* ESTILOS BODY */
@@ -64,6 +65,8 @@ body{
     text-align: left;
     /* display: inline; */
     margin: 0rem 2rem;
+    width: 65px;
+    height: 65px;
 }
 .header__h1{
     /* text-align: center; */
@@ -125,7 +128,8 @@ body{
     margin: 1rem;
 }
 .main__logo{
-    width: 40rem;
+    height: 25rem;
+    width: 30rem;
 }
 .main__p, .main__label, .main__legend{
     font-family: var(--fuente-normal);
@@ -137,11 +141,6 @@ body{
 .main input, .main select, .main textarea{
     width: 20rem;
     height: 2.5rem;
-}
-
-.main__multimedia img:hover{
-    transition: all 300ms;
-    transform: scale(1.05);
 }
 
 .main__index img{
@@ -176,9 +175,9 @@ body{
     text-align: center;
 }
 
-.main__multimedia img{
-    height: 25rem;
-    width: 30rem;
+.main__multimedia img:hover{
+    transition: all 300ms;
+    transform: scale(1.05);
 }
 
 iframe{
@@ -195,6 +194,7 @@ iframe{
 
 .main__contacto img{
     width: 100%;
+    margin: 2rem 0rem;
 }
 
 
@@ -219,3 +219,58 @@ iframe{
 .footer__p, .footer__a{
     margin: 0rem 2rem;
 } 
+
+
+/* MEDIA QUERIES */
+/* CELULAR */
+@media only screen and (max-width: 480px){
+    .header__cabecera{
+        height: 6rem;
+        justify-content: center;
+    }
+    .header__logo{
+        width: 50px;
+        height: 50px;
+        margin: 0rem 1rem;
+    }
+
+    .header__h1{
+        font-size: 3rem;
+    }
+
+    .main{
+        margin: 0rem 0rem;
+        padding: 1rem 2rem;
+    }
+
+    .main__logo{
+        height: 20rem;
+        width: 25rem;
+    }
+
+    .main__index img{
+        width: 100%;
+    }
+
+    .main__multimedia{
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr;
+        gap: 1rem;
+    }
+
+    .main__contacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0rem;
+    }
+    
+    .main__contacto img{
+        display: none;
+    }
+}
+
+/* TABLET */
+/* @media only screen and (min-width: 481px) and (max-width: 950px){
+    
+} */
