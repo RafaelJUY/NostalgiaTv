@@ -127,34 +127,34 @@ body{
     font-size: 2.2rem;
     margin: 1rem;
 }
-.main__logo{
+.mainMultimedia__logoTV{
     height: 25rem;
     width: 30rem;
 }
-.main__p, .main__label, .main__legend{
+.main__p, .mainContacto__label, .mainContacto__legend{
     font-family: var(--fuente-normal);
     text-align: justify;
     line-height: 3rem;
     margin: 2rem 0rem;
 }
 
-.main input, .main select, .main textarea{
+.mainContacto__input, .mainContacto__select, .mainContacto__textarea{
     width: 20rem;
     height: 2.5rem;
 }
 
-.main__index img{
+.mainIndex__img{
     width: 80rem;
 }
 
-.main__index{
+.mainIndex{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main__multimedia{
+.mainMultimedia{
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr; /*Cuantas columnas son*/
@@ -167,7 +167,7 @@ body{
     /* align-content: center; Para alinear la grilla en el eje vertical, el padre tiene que tener un tamaño definido verticalmente*/
 }
 
-.main__multimedia div{
+.mainMultimedia div{
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -175,24 +175,24 @@ body{
     text-align: center;
 }
 
-.main__multimedia img:hover{
+.mainMultimedia__logoTV:hover{
     transition: all 300ms;
     transform: scale(1.05);
 }
 
-iframe{
+.mainMultimedia__video{
     width: 100%;
     height: 315px;
 }
 
-.main__contacto{
+.mainContacto{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 5rem;
 }
 
-.main__contacto img{
+.mainContacto__img{
     width: 100%;
     margin: 2rem 0rem;
 }
@@ -243,29 +243,29 @@ iframe{
         padding: 1rem 2rem;
     }
 
-    .main__logo{
+    .mainMultimedia__logoTV{
         height: 20rem;
         width: 25rem;
     }
 
-    .main__index img{
+    .mainIndex__img{
         width: 100%;
     }
 
-    .main__multimedia{
+    .mainMultimedia{
         grid-template-columns: 1fr;
         grid-template-rows: 5fr;
         gap: 1rem;
     }
 
-    .main__contacto{
+    .mainContacto{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         gap: 0rem;
     }
     
-    .main__contacto img{
+    .mainContacto img{
         display: none;
     }
 }
