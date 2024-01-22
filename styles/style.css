@@ -52,6 +52,7 @@ body{
     background-color: var(--color-oscuro1);
     position: sticky;
     top: 0rem;
+    z-index: 1000;
 }
 .header__cabecera{
     height: 8rem;
@@ -140,6 +141,11 @@ body{
     font-size: 2rem;
 }
 
+.main__p span{
+    font-style: italic;
+    font-weight: bold;
+}
+
 .mainContacto__legend{
     font-weight: bold;
 }
@@ -179,12 +185,19 @@ body{
     /* justify-content: center; */
     align-items: center;
     text-align: center;
+    background-color: var(--color-claro2);
+    padding: 2rem;
 }
 
-.mainMultimedia__logoTV:hover{
+.main__btn{
+    background-color: var(--color-oscuro1);
+    font-size: 1.2rem;
+}
+
+/* .mainMultimedia__logoTV:hover{
     transition: all 300ms;
     transform: scale(1.05);
-}
+} */
 
 .mainMultimedia__video{
     width: 100%;
