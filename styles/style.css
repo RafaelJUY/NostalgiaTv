@@ -54,7 +54,7 @@ body{
     top: 0rem;
 }
 .header__cabecera{
-    height: 10rem;
+    height: 8rem;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -74,7 +74,7 @@ body{
     /* display: inline; */
 }
 .header__nav, .nav{
-    background-color: var(--color-nav);
+    /* background-color: var(--color-nav); */
     font-size: 2rem;
     /* flex: 1; Ocupa todo el espacio disponible en el header */
 }
@@ -126,6 +126,7 @@ body{
     text-align: center;
     font-size: 2.2rem;
     margin: 1rem;
+    font-weight: bold;
 }
 .mainMultimedia__logoTV{
     height: 25rem;
@@ -136,6 +137,11 @@ body{
     text-align: justify;
     line-height: 3rem;
     margin: 2rem 0rem;
+    font-size: 2rem;
+}
+
+.mainContacto__legend{
+    font-weight: bold;
 }
 
 .mainContacto__input, .mainContacto__select, .mainContacto__textarea{
