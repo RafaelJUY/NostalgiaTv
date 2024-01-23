@@ -33,7 +33,7 @@ html{
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*Para que respeque el tamaño del padre*/
+    box-sizing: border-box; /*Para que respete el tamaño del padre*/
 }
 
 /* ESTILOS BODY */
@@ -64,18 +64,14 @@ body{
 
 .header__logo{
     text-align: left;
-    /* display: inline; */
     margin: 0rem 2rem;
     width: 65px;
     height: 65px;
 }
 .header__h1{
-    /* text-align: center; */
     font-size: 4rem;
-    /* display: inline; */
 }
 .header__nav, .nav{
-    /* background-color: var(--color-nav); */
     font-size: 2rem;
     /* flex: 1; Ocupa todo el espacio disponible en el header */
 }
@@ -89,13 +85,11 @@ body{
 
 .nav__li{
     list-style: none;
-    /* display: inline; */
 }
 .nav__a{
     color: white;
     text-shadow: 0px 0px 6px rgba(0,0,0,1);
     text-decoration: none;
-    /* margin: 3rem;  */
 }
 .nav__a--actual{
     text-decoration: underline;
@@ -104,7 +98,6 @@ body{
     font-weight: bold;
 }
 .nav__a:hover{
-    /* background-color: var(--color-claro2); */
     color: black;
     font-weight: bold;
     text-shadow: none;
@@ -149,11 +142,6 @@ body{
 .mainContacto__legend{
     font-weight: bold;
 }
-
-/* .mainContacto__input, .mainContacto__select, .mainContacto__textarea{
-    width: 20rem;
-    height: 2.5rem;
-} */
 
 .mainContacto__btn{
     width: 10rem;
@@ -213,11 +201,6 @@ body{
     border-color: var(--color-oscuro2);
 }
 
-/* .mainMultimedia__logoTV:hover{
-    transition: all 300ms;
-    transform: scale(1.05);
-} */
-
 .mainMultimedia__video{
     width: 100%;
     height: 315px;
@@ -241,7 +224,6 @@ body{
     font-family: var(--fuente-titulo);
     background-color: var(--color-oscuro1);
     color: white;
-    /* padding: 1.5rem; */
     display: flex;
     flex-direction: row;
     justify-content: center;
