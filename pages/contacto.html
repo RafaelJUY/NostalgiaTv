@@ -81,7 +81,46 @@
                 </section>
     
                 <section>
-                    <form action="">
+                    <form>
+                        <legend class="mainContacto__legend">Tus datos:</legend>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                            <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Tu nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nombre@ejemplo.com">
+                        </div>
+
+                        <legend class="mainContacto__legend">Sobre el Dibujo Animado o Serie</legend>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                            <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Nombre Dibujo Animado o Serie">
+                        </div>
+                        <label class="mainContacto__label" for="canal">¿En que Canal de TV lo veías?</label>
+                        <select class="form-select form-select-lg" aria-label="Default select example">
+                            <option selected>Selecciona un Canal de TV</option>
+                            <option value="1">Nickelodeon</option>
+                            <option value="2">Disney Channel</option>
+                            <option value="3">Cartoon Network</option>
+                            <option value="4">Jetix</option>
+                            <option value="5">Discovery Kids</option>
+                            <option value="6">Otro</option>
+                        </select>
+                        
+                        <label class="mainContacto__label" for="comentario">¿Quieres agregar algo más?</label>
+                        <div class="form-floating">
+                            <textarea class="form-control form-control-lg" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly">
+                            <button type="reset" class="btn btn-primary mainContacto__btn">Limpiar</button>
+                            <button type="submit" class="btn btn-primary mainContacto__btn">Enviar</button>
+                        </div>
+                    </form>
+
+
+                    <!-- <form action="">
                         <fieldset>
                             <legend class="mainContacto__legend">Tus datos:</legend>
                             <div>
@@ -118,7 +157,7 @@
                             <input class="mainContacto__input" type="reset" value="Limpiar">
                             <input class="mainContacto__input" type="submit" value="Enviar">
                         </div>
-                    </form>
+                    </form> -->
                 </section>
             </div>
         </div>

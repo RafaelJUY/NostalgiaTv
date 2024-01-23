@@ -150,9 +150,22 @@ body{
     font-weight: bold;
 }
 
-.mainContacto__input, .mainContacto__select, .mainContacto__textarea{
+/* .mainContacto__input, .mainContacto__select, .mainContacto__textarea{
     width: 20rem;
     height: 2.5rem;
+} */
+
+.mainContacto__btn{
+    width: 10rem;
+    height: 2.5rem;
+    margin: 1rem;
+    background-color: var(--color-oscuro1);
+    border-color: var(--color-oscuro1);
+}
+
+.mainContacto__btn:hover{
+    background-color: var(--color-oscuro2);
+    border-color: var(--color-oscuro2);
 }
 
 .mainIndex__img{
@@ -191,7 +204,13 @@ body{
 
 .main__btn{
     background-color: var(--color-oscuro1);
+    border-color: var(--color-oscuro1);
     font-size: 1.2rem;
+}
+
+.main__btn:hover{
+    background-color: var(--color-oscuro2);
+    border-color: var(--color-oscuro2);
 }
 
 /* .mainMultimedia__logoTV:hover{
