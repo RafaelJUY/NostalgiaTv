@@ -132,7 +132,6 @@ body{
 }
 .main__p, .mainContacto__label, .mainContacto__legend{
     font-family: var(--fuente-normal);
-    text-align: justify;
     line-height: 3rem;
     margin: 2rem 0rem 1rem 0rem;
     font-size: 2rem;
