@@ -1,0 +1,25 @@
+{
+  "name": "nostalgiatv",
+  "version": "1.0.1",
+  "description": "pagina web de series y dibujos animados viejos",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/style.scss:build/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelJUY/NostalgiaTv.git"
+  },
+  "author": "Rafael Enrique Cortez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelJUY/NostalgiaTv/issues"
+  },
+  "homepage": "https://github.com/RafaelJUY/NostalgiaTv#readme",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  },
+  "dependencies": {
+    "gitignore": "^0.7.0"
+  }
+}

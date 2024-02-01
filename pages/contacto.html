@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="../styles/normalize.css">
 
     <!--Estilos y preload-->
-    <link rel="preload" href="../styles/style.css" as="style">
-    <link rel="stylesheet" href="../styles/style.css">
+    <!-- <link rel="preload" href="../styles/style.css" as="style">
+    <link rel="stylesheet" href="../styles/style.css"> -->
+    <link rel="stylesheet" href="../build/css/style.css">
     
     <!--Icono de ventana-->
     <link rel="shortcut icon" href="../medios/images/logo_pagina.PNG" type="image/x-icon">
@@ -25,9 +26,9 @@
         <nav class="navbar navbar-expand-lg header__nav nav">
             <div class="container-fluid">
 
-                <section class="header__cabecera">
+                <section class="cabecera">
                     <!--Logo-->
-                    <a href="../index.html" class="header__logo">
+                    <a href="../index.html" class="cabecera__logo">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-tv-old" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
@@ -39,7 +40,7 @@
                     </a>
                     
                     <!--Titulo-->
-                    <h1 class="header__h1">NostalgiaTV</h1>
+                    <h1 class="cabecera__h1">NostalgiaTV</h1>
                 </section>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,9 +71,9 @@
 
     <main class="main">
         <h2 class="main__h2">Contactanos</h2>
-        <div class="mainContacto">
+        <div class="contenedorContacto">
             <div>
-                <img class="mainContacto__img" src="../medios/images/contactanos.jpg" alt="Imagen de contacto">
+                <img class="contenedorContacto__img" src="../medios/images/contactanos.jpg" alt="Imagen de contacto">
             </div>
             
             <div>
@@ -82,7 +83,7 @@
     
                 <section>
                     <form>
-                        <legend class="mainContacto__legend">Tus datos:</legend>
+                        <legend class="contenedorContacto__legend">Tus datos:</legend>
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">Nombre</label>
                             <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Tu nombre">
@@ -92,12 +93,12 @@
                             <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nombre@ejemplo.com">
                         </div>
 
-                        <legend class="mainContacto__legend">Sobre el Dibujo Animado o Serie</legend>
+                        <legend class="contenedorContacto__legend">Sobre el Dibujo Animado o Serie</legend>
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">Nombre</label>
                             <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Nombre Dibujo Animado o Serie">
                         </div>
-                        <label class="mainContacto__label" for="canal">¿En que Canal de TV lo veías?</label>
+                        <label class="contenedorContacto__label" for="canal">¿En que Canal de TV lo veías?</label>
                         <select class="form-select form-select-lg" aria-label="Default select example">
                             <option selected>Selecciona un Canal de TV</option>
                             <option value="1">Nickelodeon</option>
@@ -108,40 +109,40 @@
                             <option value="6">Otro</option>
                         </select>
                         
-                        <label class="mainContacto__label" for="comentario">¿Quieres agregar algo más?</label>
+                        <label class="contenedorContacto__label" for="comentario">¿Quieres agregar algo más?</label>
                         <div class="form-floating">
                             <textarea class="form-control form-control-lg" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                         </div>
 
                         <div class="d-flex justify-content-evenly">
-                            <button type="reset" class="btn btn-primary mainContacto__btn">Limpiar</button>
-                            <button type="submit" class="btn btn-primary mainContacto__btn">Enviar</button>
+                            <button type="reset" class="btn btn-primary contenedorContacto__btn">Limpiar</button>
+                            <button type="submit" class="btn btn-primary contenedorContacto__btn">Enviar</button>
                         </div>
                     </form>
 
 
                     <!-- <form action="">
                         <fieldset>
-                            <legend class="mainContacto__legend">Tus datos:</legend>
+                            <legend class="contenedorContacto__legend">Tus datos:</legend>
                             <div>
-                                <label class="mainContacto__label"  for="nombre_usuario">Nombre</label>
-                                <input class="mainContacto__input" type="text" name="" id="nombre_usuario" placeholder="Tu Nombre">
+                                <label class="contenedorContacto__label"  for="nombre_usuario">Nombre</label>
+                                <input class="contenedorContacto__input" type="text" name="" id="nombre_usuario" placeholder="Tu Nombre">
                             </div>
                             <div>
-                                <label class="mainContacto__label" for="correo">Correo Electronico</label>
-                                <input class="mainContacto__input" type="email" name="" id="correo" placeholder="ejemplo@gmail.com">
+                                <label class="contenedorContacto__label" for="correo">Correo Electronico</label>
+                                <input class="contenedorContacto__input" type="email" name="" id="correo" placeholder="ejemplo@gmail.com">
                             </div>
                         </fieldset>
                         
                         <fieldset>
-                            <legend class="mainContacto__legend">Sobre el dibujo animado</legend>
+                            <legend class="contenedorContacto__legend">Sobre el dibujo animado</legend>
                             <div>
-                                <label class="mainContacto__label" for="nombre">Nombre del dibujo animado:</label>
-                                <input class="mainContacto__input" type="text" name="" id="nombre">
+                                <label class="contenedorContacto__label" for="nombre">Nombre del dibujo animado:</label>
+                                <input class="contenedorContacto__input" type="text" name="" id="nombre">
                             </div>
                             <div>
-                                <label class="mainContacto__label" for="canal">¿En que Canal de TV lo veías?</label>
-                                <select class="mainContacto__select" name="" id="canal">
+                                <label class="contenedorContacto__label" for="canal">¿En que Canal de TV lo veías?</label>
+                                <select class="contenedorContacto__select" name="" id="canal">
                                     <option value="">Nickelodeon</option>
                                     <option value="">Disney Channel</option>
                                     <option value="">Cartoon Network</option>
@@ -149,13 +150,13 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="mainContacto__label" for="comentario">¿Quieres agregar algo más?</label>
-                                <textarea class="mainContacto__textarea" name="" id="comentario" cols="30" rows="2"></textarea>
+                                <label class="contenedorContacto__label" for="comentario">¿Quieres agregar algo más?</label>
+                                <textarea class="contenedorContacto__textarea" name="" id="comentario" cols="30" rows="2"></textarea>
                             </div>
                         </fieldset>
                         <div>
-                            <input class="mainContacto__input" type="reset" value="Limpiar">
-                            <input class="mainContacto__input" type="submit" value="Enviar">
+                            <input class="contenedorContacto__input" type="reset" value="Limpiar">
+                            <input class="contenedorContacto__input" type="submit" value="Enviar">
                         </div>
                     </form> -->
                 </section>

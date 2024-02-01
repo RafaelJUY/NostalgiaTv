@@ -1,0 +1,45 @@
+/*Fuente para el texto*/
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+/*font-family: 'Rock Salt', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+/*font-family: 'Fira Sans', sans-serif;*/
+
+
+// Paleta de colores: https://colorhunt.co/palette/607274faeed1ded0b6b2a59b
+// #FAEED1 , rgb(96, 114, 116) 
+// #DED0B6 , rgb(250, 238, 209)
+// #B2A59B , rgb(222, 208, 182)
+// #607274 , rgb(178, 165, 155)
+
+
+// VARIABLES
+$color-oscuro1:#607274;
+$color-oscuro2:#B2A59B;
+$color-claro1: #DED0B6;
+$color-claro2: #FAEED1;
+
+$color-nav: #7B8D8F;
+$color-body: #B4AA99;
+
+$fuente-titulo: 'Rock Salt', cursive;
+$fuente-normal: 'Fira Sans', sans-serif;
+
+// GENERAL
+// html para que manejar "rem" sea mas sencillo
+// 1rem = 10px
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; //Para que respete el tamaño del padre
+}
+
+body{
+    background-color: $color-body;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

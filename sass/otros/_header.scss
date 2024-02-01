@@ -1,0 +1,75 @@
+.header{
+    font-family: $fuente-titulo;
+    // background-image: url(../medios/images/fondo_header.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    background-color: $color-oscuro1;
+    position: sticky;
+    top: 0rem;
+    z-index: 1000;
+
+    &__nav, .nav{
+        font-size: 2rem;
+        // flex: 1; Ocupa todo el espacio disponible en el header
+
+        .cabecera{
+            height: 8rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+    
+            &__logo{
+                text-align: left;
+                margin: 0rem 2rem;
+                width: 65px;
+                height: 65px;
+            }
+    
+            &__h1{
+                font-size: 4rem;
+            }
+        }
+
+        .nav__ul{
+            padding: 1rem 0rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+
+            .nav__li{
+                list-style: none;
+
+                .nav__a{
+                    color: white;
+                    text-shadow: 0px 0px 6px rgba(0,0,0,1);
+                    text-decoration: none;
+
+                    &--actual{
+                        text-decoration: underline;
+                        color: black;
+                        text-shadow: none;
+                        font-weight: bold;
+                    }
+
+                    &:hover{
+                        color: black;
+                        font-weight: bold;
+                        text-shadow: none;
+                    }
+                }
+            }
+
+
+        }
+
+
+
+    }
+
+
+
+
+}

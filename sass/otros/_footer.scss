@@ -1,0 +1,22 @@
+.footer{
+    font-family: $fuente-titulo;
+    background-color: $color-oscuro1;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+
+    &__p{
+        font-size: 1.5rem;
+    }
+
+    &__p, &__a{
+        margin: 0rem 2rem;
+    } 
+
+    &__p span{
+        font-weight: bold;
+    }
+}
