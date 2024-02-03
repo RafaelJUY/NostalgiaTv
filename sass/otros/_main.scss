@@ -2,7 +2,7 @@
     background-color: $color-claro1;
     margin: 0rem 15rem;
     padding: 1rem 5rem;
-    font-size: 2rem;
+    // font-size: 2rem;
     flex: 1; //Hace que el contenido principal ocupe el espacio restante en la columna
 
     &__h2, &__h3{
@@ -31,9 +31,13 @@
     // }
 
     &__btn{
+        width: auto;
+        height: auto;
+        margin: 1rem;
         background-color: $color-oscuro1;
         border-color: $color-oscuro1;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        font-family: $fuente-normal;
 
         &:hover{
             background-color: $color-oscuro2;
@@ -45,7 +49,7 @@
         display: grid;
     
         grid-template-columns: 1fr 1fr 1fr; //Cuantas columnas son
-        grid-template-rows: 1fr 1fr; //Cuantas filas son
+        // grid-template-rows: 1fr 1fr; //Cuantas filas son
     
         gap: 2rem; //Para dar espacio entre columa y fila del grid
     
@@ -78,6 +82,10 @@
             width: 100%;
             height: 315px;
         }
+
+        // & div:nth-child(5){
+        //     grid-column: 2 / 4;
+        // }
     }
 
     .contenedorDibujosAnimados{
@@ -102,18 +110,18 @@
             font-weight: bold;
         }
 
-        &__btn{
-            width: 10rem;
-            height: 2.5rem;
-            margin: 1rem;
-            background-color: $color-oscuro1;
-            border-color: $color-oscuro1;
+        // &__btn{
+        //     width: 10rem;
+        //     height: 2.5rem;
+        //     margin: 1rem;
+        //     background-color: $color-oscuro1;
+        //     border-color: $color-oscuro1;
 
-            &:hover{
-                background-color: var(--color-oscuro2);
-                border-color: var(--color-oscuro2);
-            }
-        }
+        //     &:hover{
+        //         background-color: $color-oscuro2;
+        //         border-color: $color-oscuro2;
+        //     }
+        // }
 
         &__img{
             width: 100%;

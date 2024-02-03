@@ -1,0 +1,76 @@
+/* MEDIA QUERIE CELULAR */
+@media only screen and (max-width: 480px){
+    .header{
+        padding: 0rem 1.6rem 0rem 0rem;
+        &__nav, .nav{
+            font-size: 1.8rem;
+
+            .cabecera{
+                height: 5rem;
+                justify-content: center;
+        
+                &__logo{
+                    width: 45px;
+                    height: 45px;
+                    margin: 0rem 1rem;
+                }
+        
+                &__h1{
+                    font-size: 3rem;
+                }
+            }
+
+        }
+
+    }
+
+
+    .main{
+        margin: 0rem 0rem;
+        padding: 1rem 1.6rem;
+        // font-size: 1.6rem;
+        &__p{
+            font-size: 1.8rem;
+        }
+
+        .contenedorTV, .contenedorSeries, .contenedorDibujosAnimados{
+            grid-template-columns: 1fr;
+            grid-template-rows: 5fr;
+            gap: 1rem;
+        }
+
+        .contenedorTV{
+            &__logoTV{
+                height: 20rem;
+                width: 25rem;
+            }
+        }
+
+        .contenedorContacto{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            gap: 0rem;
+
+            &__img{
+                display: none;
+            }
+        }
+    }
+
+    .mainIndex__img{
+        width: 100%;
+    }
+
+
+    .footer{
+        height: 5rem;   
+        &__p{
+            font-size: 1.2rem;
+        }
+
+        &__p, &__a{
+            margin: 0rem 1.6rem;
+        } 
+    }
+}
