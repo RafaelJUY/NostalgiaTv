@@ -1,7 +1,7 @@
 .main{
     background-color: $color-claro1;
-    margin: 0rem 15rem;
-    padding: 1rem 5rem;
+    // margin: 0rem 15rem;
+    // padding: 1rem 5rem;
     // font-size: 2rem;
     flex: 1; //Hace que el contenido principal ocupe el espacio restante en la columna
 
@@ -48,7 +48,7 @@
     @mixin contenedorMultimedia_grid{
         display: grid;
     
-        grid-template-columns: 1fr 1fr 1fr; //Cuantas columnas son
+        // grid-template-columns: 1fr 1fr 1fr; //Cuantas columnas son
         // grid-template-rows: 1fr 1fr; //Cuantas filas son
     
         gap: 2rem; //Para dar espacio entre columa y fila del grid
@@ -71,8 +71,8 @@
     .contenedorTV{
         @include contenedorMultimedia_grid();
         &__logoTV{
-            height: 25rem;
-            width: 30rem;
+            height: 20rem;
+            width: 25rem;
         }
     }
 
