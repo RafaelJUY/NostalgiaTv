@@ -105,10 +105,15 @@
     }
 
     .contenedorContacto{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 5rem;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 1fr;
+        // gap: 5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         &__label, &__legend{
             @extend .main__p;

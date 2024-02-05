@@ -32,16 +32,20 @@
             font-size: 1.8rem;
         }
 
-        .contenedorContacto{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            gap: 0rem;
-
-            &__img{
-                display: none;
-            }
+        .contenedorContacto section{
+            width: 100%;
         }
+
+        // .contenedorContacto{
+        //     display: grid;
+        //     grid-template-columns: 1fr;
+        //     grid-template-rows: 1fr;
+        //     gap: 0rem;
+
+        //     &__img{
+        //         display: none;
+        //     }
+        // }
     }
 
     .mainIndex__img{
@@ -96,16 +100,20 @@
             font-size: 1.8rem;
         }
 
-        .contenedorContacto{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            gap: 0rem;
-
-            &__img{
-                display: none;
-            }
+        .contenedorContacto section{
+            width: 70%;
         }
+
+        // .contenedorContacto{
+        //     display: grid;
+        //     grid-template-columns: 1fr;
+        //     grid-template-rows: 1fr;
+        //     gap: 0rem;
+
+        //     &__img{
+        //         display: none;
+        //     }
+        // }
     }
 
     .mainIndex__img{
@@ -131,10 +139,14 @@
     .main{
         margin: 0rem 0rem;
         padding: 1rem 1.6rem;
+
+        .contenedorContacto section{
+            width: 60%;
+        }
     }
 }
 
-// MEDIA QUERIES PARA MULTIMEDIA
+/* MEDIA QUERIES PARA MULTIMEDIA */
 @media only screen and (max-width: 800px){
     .main{
         .contenedorTV, .contenedorSeries, .contenedorDibujosAnimados{
