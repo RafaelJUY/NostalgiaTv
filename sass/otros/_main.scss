@@ -71,8 +71,14 @@
     .contenedorTV{
         @include contenedorMultimedia_grid();
         &__logoTV{
-            height: 20rem;
+            height: 22rem;
             width: 25rem;
+            padding: 1rem 0rem;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: transform 0.3s;
+            }
         }
     }
 

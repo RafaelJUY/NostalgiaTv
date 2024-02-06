@@ -26,6 +26,11 @@
                 margin: 0rem 2rem 0rem 0rem;
                 width: 65px;
                 height: 65px;
+
+                &:hover{
+                    transform: rotate(-20deg);
+                    transition: transform .3s;
+                }
             }
     
             &__h1{

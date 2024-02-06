@@ -49,6 +49,10 @@ body {
   width: 65px;
   height: 65px;
 }
+.header__nav .cabecera__logo:hover, .header .nav .cabecera__logo:hover {
+  transform: rotate(-20deg);
+  transition: transform 0.3s;
+}
 .header__nav .cabecera__h1, .header .nav .cabecera__h1 {
   font-size: 4rem;
 }
@@ -127,8 +131,13 @@ body {
   padding: 2rem;
 }
 .main .contenedorTV__logoTV {
-  height: 20rem;
+  height: 22rem;
   width: 25rem;
+  padding: 1rem 0rem;
+}
+.main .contenedorTV__logoTV:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
 }
 .main .contenedorSeries {
   display: grid;
@@ -200,6 +209,10 @@ body {
 }
 .footer__p, .footer__a {
   margin: 0rem 2rem;
+}
+.footer__a:hover {
+  transform: rotate(20deg);
+  transition: transform 0.3s;
 }
 .footer__p span {
   font-weight: bold;
