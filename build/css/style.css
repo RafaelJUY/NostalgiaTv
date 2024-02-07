@@ -21,6 +21,23 @@ body {
   min-height: 100vh;
 }
 
+@keyframes animacionLatido {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*HEADER*/
 .header {
   font-family: "Rock Salt", cursive;
@@ -55,6 +72,10 @@ body {
 }
 .header__nav .cabecera__titulo, .header .nav .cabecera__titulo {
   font-size: 4rem;
+  animation-name: animacionLatido;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-delay: 0s;
 }
 .header__nav .nav__ul, .header .nav .nav__ul {
   padding: 1rem 0rem;
@@ -203,6 +224,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: auto;
+  height: 6rem;
 }
 .footer__p {
   font-size: 1.5rem;
@@ -237,6 +259,9 @@ body {
     margin: 0rem 1rem;
   }
   .header__nav .cabecera__h1, .header .nav .cabecera__h1 {
+    font-size: 3rem;
+  }
+  .header__nav .cabecera__titulo, .header .nav .cabecera__titulo {
     font-size: 3rem;
   }
   .main {
@@ -280,6 +305,9 @@ body {
     margin: 0rem 1rem;
   }
   .header__nav .cabecera__h1, .header .nav .cabecera__h1 {
+    font-size: 3rem;
+  }
+  .header__nav .cabecera__titulo, .header .nav .cabecera__titulo {
     font-size: 3rem;
   }
   .main {

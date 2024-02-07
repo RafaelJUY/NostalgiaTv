@@ -35,7 +35,20 @@
     
             &__titulo{
                 font-size: 4rem;
+                @include animacionLatido;
+                // animation-name: animacionTitulo;
+                // animation-iteration-count: infinite;
+                // animation-duration: 2s;
+                // animation-delay: 0s;
             }
+
+            // @keyframes animacionTitulo {
+            //     0%{transform: scale(1);}
+            //     25%{transform: scale(1.05);}
+            //     50%{transform: scale(1);}
+            //     75%{transform: scale(1.05);}
+            //     100%{transform: scale(1);}
+            // }
         }
 
         .nav__ul{

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Recordá esos dibujos animados y series que te acompañaron en tu infancia.">
     <meta name="keywords" content="dibujos animados, series, antiguo, infancia, programas, tv, clasicos">
+    
+    <!-- Libreria AOS de animacion -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -75,15 +78,15 @@
         <h1 class="main__h1">NostalgiaTv - Objetivo</h1>
         <p class="main__p">¡Bienvenido a un viaje nostálgico a la era dorada de los dibujos animados y series antiguas! Sumérgete en recuerdos entrañables mientras exploras nuestra colección de los clásicos que marcaron una generación. Revive la magia de tu infancia y descubre o redescubre tus series favoritas en este rincón dedicado a la nostalgia animada de una época inolvidable.</p>
         
-        <img class="mainIndex__img" src="./medios/images/cartoon_network_dibujitos.jpg" alt="Dibujos animados de Cartoon Network">
+        <img class="mainIndex__img" data-aos="flip-left" src="./medios/images/cartoon_network_dibujitos.jpg" alt="Dibujos animados de Cartoon Network">
 
         <p class="main__p"> En aquellos años, estos animados y series no solo eran simples programas de tv; eran nuestros compañeros de desayuno antes de ir al colegio o durante la merienda. ¿Recuerdas esos momentos mágicos compartidos con hermanos o amigos, riendo juntos con las historias de nuestros personajes favoritos?</p>
         
-        <img class="mainIndex__img" src="./medios/images/nickelodeon_dibujitos.jpeg" alt="Dibujos animados de Nickelodeon">
+        <img class="mainIndex__img" data-aos="flip-left" src="./medios/images/nickelodeon_dibujitos.jpeg" alt="Dibujos animados de Nickelodeon">
 
         <p class="main__p">Estos dibujos no solo nos entretenían, sino que estimulaban nuestra imaginación y creatividad. ¿Alguna vez has pensado nuevas aventuras inspiradas en esos universos animados? Además, muchas veces la tematica de nuestras fiestas de cumpleaños giraban en torno a estos personajes viendolos en manteles, vasos, platos, servilletas, piñata y hasta la misma torta, ¡nuestros dibujos animados favoritos eran el centro de atención en esos días tan especiales!</p>
 
-        <img class="mainIndex__img" src="./medios/images/disney_dibujitos.jpg" alt="Dibujos animados de Disney">
+        <img class="mainIndex__img" data-aos="flip-left" src="./medios/images/disney_dibujitos.jpg" alt="Dibujos animados de Disney">
         <p class="main__p">Este espacio está dedicado a revivir esos momentos inolvidables, a desempolvar esos recuerdos que nos transportan a una época llena de magia y alegría.</p>
     </main>
 
@@ -103,6 +106,14 @@
             </svg>
         </a>
     </footer>
+
+    <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Script de animacion AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
