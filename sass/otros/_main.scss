@@ -1,4 +1,5 @@
 .main{
+    @include sombras;
     background-color: $color-claro1;
     // margin: 0rem 15rem;
     // padding: 1rem 5rem;
@@ -24,11 +25,6 @@
             font-weight: bold;
         }
     }
-
-    // &__p span{
-    //     font-style: italic;
-    //     font-weight: bold;
-    // }
 
     &__btn{
         width: auto;
@@ -63,7 +59,7 @@
             //justify-content: center;
             align-items: center;
             text-align: center;
-            background-color: $color-claro2;
+            // background-color: $color-claro2;
             padding: 2rem;
         }
     }
@@ -80,6 +76,17 @@
                 transition: transform 0.3s;
             }
         }
+
+        .canalTV{
+            @include sombras;
+            background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
+
+            &:hover{
+                background-color: $color-claro2;
+                background-image: none;
+                transition: transition background-image .5s;
+            }
+        }
     }
 
     .contenedorSeries{
@@ -89,17 +96,16 @@
             height: 315px;
         }
 
-        // & div:nth-child(2){
-        //     grid-column: 2 / 4;
-        // }
+        .serie{
+            @include sombras;
+            background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
 
-        // & div:nth-child(6){
-        //     grid-column: 1 / 3;
-        // }
-
-        // & div:nth-child(12){
-        //     grid-column: 2 / 4;
-        // }
+            &:hover{
+                background-color: $color-claro2;
+                background-image: none;
+                transition: transition background-image .5s;
+            }
+        }
     }
 
     .contenedorDibujosAnimados{
@@ -108,14 +114,20 @@
             @extend .contenedorSeries__video;
         }
 
+        .dibujoAnimado{
+            @include sombras;
+            background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
+
+            &:hover{
+                background-color: $color-claro2;
+                background-image: none;
+                transition: transition background-image .5s;
+            }
+        }
     }
 
-    .contenedorContacto{
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-template-rows: 1fr;
-        // gap: 5rem;
 
+    .contenedorContacto{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -128,19 +140,6 @@
         &__legend{
             font-weight: bold;
         }
-
-        // &__btn{
-        //     width: 10rem;
-        //     height: 2.5rem;
-        //     margin: 1rem;
-        //     background-color: $color-oscuro1;
-        //     border-color: $color-oscuro1;
-
-        //     &:hover{
-        //         background-color: $color-oscuro2;
-        //         border-color: $color-oscuro2;
-        //     }
-        // }
 
         &__img{
             width: 100%;
@@ -159,6 +158,7 @@
     align-items: center;
 
     &__img{
+        @include sombras;
         width: 80rem;
     }
 }

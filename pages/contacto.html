@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="../styles/normalize.css">
 
     <!--Estilos y preload-->
-    <!-- <link rel="preload" href="../styles/style.css" as="style">
-    <link rel="stylesheet" href="../styles/style.css"> -->
+    <link rel="preload" href="../build/css/style.css" as="style">
     <link rel="stylesheet" href="../build/css/style.css">
     
     <!--Icono de ventana-->
@@ -25,7 +24,7 @@
 </head>
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg header__nav nav">
+        <nav class="navbar navbar-expand-lg nav">
             <div class="container-fluid">
 
                 <section class="cabecera">
@@ -74,95 +73,49 @@
     <main class="main">
         <h1 class="main__h1">Contactanos</h1>
         <div class="contenedorContacto">
-            <!-- <div>
-                <img class="contenedorContacto__img" src="../medios/images/contactanos.jpg" alt="Imagen de contacto">
-            </div> -->
-            
-            <!-- <div> -->
-                <section>
-                    <p class="main__p">Si no viste tu dibujo animado o serie de la infancia puedes decírnoslo para agregarlo.</p>
-                </section>
-    
-                <section>
-                    <form>
-                        <legend class="contenedorContacto__legend">Tus datos:</legend>
-                        <div class="mb-3">
-                            <label class="contenedorContacto__label" for="formGroupExampleInput" class="form-label">Nombre</label>
-                            <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Tu nombre">
-                        </div>
-                        <div class="mb-3">
-                            <label class="contenedorContacto__label" for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nombre@ejemplo.com">
-                        </div>
+            <section>
+                <p class="main__p">Si no viste tu dibujo animado o serie de la infancia puedes decírnoslo para agregarlo.</p>
+            </section>
 
-                        <legend class="contenedorContacto__legend">Sobre el Dibujo Animado o Serie</legend>
-                        <div class="mb-3">
-                            <label class="contenedorContacto__label" for="formGroupExampleInput" class="form-label">Nombre</label>
-                            <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Nombre Dibujo Animado o Serie">
-                        </div>
-                        <label class="contenedorContacto__label" for="canal">¿En que Canal de TV lo veías?</label>
-                        <select class="form-select form-select-lg" aria-label="Default select example">
-                            <option selected disabled>-- Selecciona un Canal de TV --</option>
-                            <option value="1">Nickelodeon</option>
-                            <option value="2">Disney Channel</option>
-                            <option value="3">Cartoon Network</option>
-                            <option value="4">Jetix</option>
-                            <option value="5">Discovery Kids</option>
-                            <option value="6">Otro</option>
-                        </select>
-                        
-                        <label class="contenedorContacto__label" for="comentario">¿Quieres agregar algo más?</label>
-                        <div class="form-floating">
-                            <textarea class="form-control form-control-lg" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                        </div>
+            <section>
+                <form>
+                    <legend class="contenedorContacto__legend">Tus datos:</legend>
+                    <div class="mb-3">
+                        <label class="contenedorContacto__label" for="formGroupExampleInput" class="form-label">Nombre</label>
+                        <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label class="contenedorContacto__label" for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nombre@ejemplo.com">
+                    </div>
 
-                        <div class="d-flex justify-content-evenly">
-                            <button type="reset" class="btn btn-primary main__btn">Limpiar</button>
-                            <button type="submit" class="btn btn-primary main__btn">Enviar</button>
-                        </div>
-                    </form>
+                    <legend class="contenedorContacto__legend">Sobre el Dibujo Animado o Serie</legend>
+                    <div class="mb-3">
+                        <label class="contenedorContacto__label" for="formGroupExampleInput" class="form-label">Nombre</label>
+                        <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="Nombre Dibujo Animado o Serie">
+                    </div>
+                    <label class="contenedorContacto__label" for="canal">¿En que Canal de TV lo veías?</label>
+                    <select class="form-select form-select-lg" aria-label="Default select example">
+                        <option selected disabled>-- Selecciona un Canal de TV --</option>
+                        <option value="1">Nickelodeon</option>
+                        <option value="2">Disney Channel</option>
+                        <option value="3">Cartoon Network</option>
+                        <option value="4">Jetix</option>
+                        <option value="5">Discovery Kids</option>
+                        <option value="6">Otro</option>
+                    </select>
+                    
+                    <label class="contenedorContacto__label" for="comentario">¿Quieres agregar algo más?</label>
+                    <div class="form-floating">
+                        <textarea class="form-control form-control-lg" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
 
-
-                    <!-- <form action="">
-                        <fieldset>
-                            <legend class="contenedorContacto__legend">Tus datos:</legend>
-                            <div>
-                                <label class="contenedorContacto__label"  for="nombre_usuario">Nombre</label>
-                                <input class="contenedorContacto__input" type="text" name="" id="nombre_usuario" placeholder="Tu Nombre">
-                            </div>
-                            <div>
-                                <label class="contenedorContacto__label" for="correo">Correo Electronico</label>
-                                <input class="contenedorContacto__input" type="email" name="" id="correo" placeholder="ejemplo@gmail.com">
-                            </div>
-                        </fieldset>
-                        
-                        <fieldset>
-                            <legend class="contenedorContacto__legend">Sobre el dibujo animado</legend>
-                            <div>
-                                <label class="contenedorContacto__label" for="nombre">Nombre del dibujo animado:</label>
-                                <input class="contenedorContacto__input" type="text" name="" id="nombre">
-                            </div>
-                            <div>
-                                <label class="contenedorContacto__label" for="canal">¿En que Canal de TV lo veías?</label>
-                                <select class="contenedorContacto__select" name="" id="canal">
-                                    <option value="">Nickelodeon</option>
-                                    <option value="">Disney Channel</option>
-                                    <option value="">Cartoon Network</option>
-                                    <option value="">Otro</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="contenedorContacto__label" for="comentario">¿Quieres agregar algo más?</label>
-                                <textarea class="contenedorContacto__textarea" name="" id="comentario" cols="30" rows="2"></textarea>
-                            </div>
-                        </fieldset>
-                        <div>
-                            <input class="contenedorContacto__input" type="reset" value="Limpiar">
-                            <input class="contenedorContacto__input" type="submit" value="Enviar">
-                        </div>
-                    </form> -->
-                </section>
-            <!-- </div> -->
+                    <div class="d-flex justify-content-evenly">
+                        <button type="reset" class="btn btn-primary main__btn">Limpiar</button>
+                        <button type="submit" class="btn btn-primary main__btn">Enviar</button>
+                    </div>
+                </form>
+            </section>
         </div>
     </main>
 
@@ -182,6 +135,8 @@
             </svg>
         </a>
     </footer>
+
+    <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
