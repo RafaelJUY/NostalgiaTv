@@ -72,6 +72,7 @@ body {
 }
 .header .nav .cabecera__titulo {
   font-size: 4rem;
+  margin: 0rem;
   animation-name: animacionLatido;
   animation-iteration-count: infinite;
   animation-duration: 2s;
@@ -171,7 +172,6 @@ body {
 .main .contenedorTV .canalTV:hover {
   background-color: #FAEED1;
   background-image: none;
-  transition: transition background-image 0.5s;
 }
 .main .contenedorSeries {
   display: grid;
@@ -198,7 +198,6 @@ body {
 .main .contenedorSeries .serie:hover {
   background-color: #FAEED1;
   background-image: none;
-  transition: transition background-image 0.5s;
 }
 .main .contenedorDibujosAnimados {
   display: grid;
@@ -221,7 +220,6 @@ body {
 .main .contenedorDibujosAnimados .dibujoAnimado:hover {
   background-color: #FAEED1;
   background-image: none;
-  transition: transition background-image 0.5s;
 }
 .main .contenedorContacto {
   display: flex;

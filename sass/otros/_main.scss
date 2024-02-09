@@ -84,7 +84,7 @@
             &:hover{
                 background-color: $color-claro2;
                 background-image: none;
-                transition: transition background-image .5s;
+                // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
     }
@@ -103,7 +103,7 @@
             &:hover{
                 background-color: $color-claro2;
                 background-image: none;
-                transition: transition background-image .5s;
+                // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
     }
@@ -121,7 +121,7 @@
             &:hover{
                 background-color: $color-claro2;
                 background-image: none;
-                transition: transition background-image .5s;
+                // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
     }
