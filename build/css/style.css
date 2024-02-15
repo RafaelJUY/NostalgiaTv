@@ -16,6 +16,7 @@ html {
 
 body {
   background-color: #B4AA99;
+  background-image: url(../../medios/images/fondo_dibujos_3.jpg);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -38,6 +39,112 @@ body {
     transform: scale(1);
   }
 }
+@keyframes animacionRotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(15deg);
+  }
+  90% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes animacionQuitarSombra {
+  0% {
+    background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
+  }
+  5% {
+    background-image: linear-gradient(to bottom, #FAEED1 33%, #DED0B6 100%);
+  }
+  10% {
+    background-image: linear-gradient(to bottom, #FAEED1 41%, #DED0B6 100%);
+  }
+  15% {
+    background-image: linear-gradient(to bottom, #FAEED1 49%, #DED0B6 100%);
+  }
+  20% {
+    background-image: linear-gradient(to bottom, #FAEED1 57%, #DED0B6 100%);
+  }
+  25% {
+    background-image: linear-gradient(to bottom, #FAEED1 65%, #DED0B6 100%);
+  }
+  30% {
+    background-image: linear-gradient(to bottom, #FAEED1 73%, #DED0B6 100%);
+  }
+  35% {
+    background-image: linear-gradient(to bottom, #FAEED1 81%, #DED0B6 100%);
+  }
+  40% {
+    background-image: linear-gradient(to bottom, #FAEED1 89%, #DED0B6 100%);
+  }
+  45% {
+    background-image: linear-gradient(to bottom, #FAEED1 97%, #DED0B6 100%);
+  }
+  50% {
+    background-image: linear-gradient(to bottom, #FAEED1 100%, #DED0B6 100%);
+  }
+  55% {
+    background-image: linear-gradient(to bottom, #FAEED1 97%, #DED0B6 100%);
+  }
+  60% {
+    background-image: linear-gradient(to bottom, #FAEED1 89%, #DED0B6 100%);
+  }
+  65% {
+    background-image: linear-gradient(to bottom, #FAEED1 81%, #DED0B6 100%);
+  }
+  70% {
+    background-image: linear-gradient(to bottom, #FAEED1 73%, #DED0B6 100%);
+  }
+  75% {
+    background-image: linear-gradient(to bottom, #FAEED1 65%, #DED0B6 100%);
+  }
+  80% {
+    background-image: linear-gradient(to bottom, #FAEED1 57%, #DED0B6 100%);
+  }
+  85% {
+    background-image: linear-gradient(to bottom, #FAEED1 49%, #DED0B6 100%);
+  }
+  90% {
+    background-image: linear-gradient(to bottom, #FAEED1 41%, #DED0B6 100%);
+  }
+  95% {
+    background-image: linear-gradient(to bottom, #FAEED1 33%, #DED0B6 100%);
+  }
+  100% {
+    background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
+  }
+}
 /*HEADER*/
 .header {
   font-family: "Rock Salt", cursive;
@@ -45,7 +152,7 @@ body {
   background-position: center;
   background-size: cover;
   color: white;
-  background-color: #607274;
+  background-color: rgba(96, 114, 116, 0.95);
   position: sticky;
   top: 0rem;
   z-index: 1000;
@@ -67,8 +174,10 @@ body {
   height: 65px;
 }
 .header .nav .cabecera__logo:hover {
-  transform: rotate(-20deg);
-  transition: transform 0.3s;
+  animation-name: animacionRotar;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 0s;
 }
 .header .nav .cabecera__titulo {
   font-size: 4rem;
@@ -88,6 +197,7 @@ body {
   list-style: none;
 }
 .header .nav .nav__ul .nav__li .nav__a {
+  white-space: nowrap;
   color: white;
   text-shadow: 0px 0px 6px rgb(0, 0, 0);
   text-decoration: none;
@@ -102,6 +212,7 @@ body {
   color: black;
   font-weight: bold;
   text-shadow: none;
+  transition: 0.3s;
 }
 
 /*MAIN*/
@@ -109,7 +220,9 @@ body {
   -webkit-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
   -moz-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
   box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
-  background-color: #DED0B6;
+  background-color: rgba(250, 238, 209, 0.9);
+  max-width: 160rem;
+  margin: 0 auto;
   flex: 1;
 }
 .main__h1, .main__h2, .main__h3, .main__h4 {
@@ -167,11 +280,13 @@ body {
   -webkit-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
   -moz-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
   box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
-  background-image: linear-gradient(to bottom, #FAEED1 75%, #DED0B6 100%);
+  background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
 }
 .main .contenedorTV .canalTV:hover {
-  background-color: #FAEED1;
-  background-image: none;
+  animation-name: animacionQuitarSombra;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s;
 }
 .main .contenedorSeries {
   display: grid;
@@ -193,11 +308,13 @@ body {
   -webkit-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
   -moz-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
   box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
-  background-image: linear-gradient(to bottom, #FAEED1 75%, #DED0B6 100%);
+  background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
 }
 .main .contenedorSeries .serie:hover {
-  background-color: #FAEED1;
-  background-image: none;
+  animation-name: animacionQuitarSombra;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s;
 }
 .main .contenedorDibujosAnimados {
   display: grid;
@@ -215,11 +332,13 @@ body {
   -webkit-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
   -moz-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
   box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
-  background-image: linear-gradient(to bottom, #FAEED1 75%, #DED0B6 100%);
+  background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
 }
 .main .contenedorDibujosAnimados .dibujoAnimado:hover {
-  background-color: #FAEED1;
-  background-image: none;
+  animation-name: animacionQuitarSombra;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s;
 }
 .main .contenedorContacto {
   display: flex;
@@ -251,7 +370,7 @@ body {
 /*FOOTER*/
 .footer {
   font-family: "Rock Salt", cursive;
-  background-color: #607274;
+  background-color: rgba(96, 114, 116, 0.95);
   color: white;
   display: flex;
   flex-direction: row;
@@ -267,8 +386,10 @@ body {
   margin: 0rem 2rem;
 }
 .footer__a:hover {
-  transform: rotate(20deg);
-  transition: transform 0.3s;
+  animation-name: animacionRotar;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 0s;
 }
 .footer__p span {
   font-weight: bold;
@@ -299,7 +420,6 @@ body {
     font-size: 3rem;
   }
   .main {
-    margin: 0rem 0rem;
     padding: 1rem 1.6rem;
   }
   .main__p, .main .contenedorContacto__label, .main .contenedorContacto__legend {
@@ -345,7 +465,6 @@ body {
     font-size: 3rem;
   }
   .main {
-    margin: 0rem 0rem;
     padding: 1rem 1.6rem;
   }
   .main__p, .main .contenedorContacto__label, .main .contenedorContacto__legend {
@@ -370,7 +489,6 @@ body {
 /* MEDIA QUERIE DESKTOP */
 @media only screen and (min-width: 950px) {
   .main {
-    margin: 0rem 0rem;
     padding: 1rem 1.6rem;
   }
   .main .contenedorContacto section {
@@ -449,7 +567,6 @@ body {
 }
 @media only screen and (min-width: 1001px) {
   .main {
-    margin: 0rem 4%;
     padding: 1rem 4%;
   }
 }

@@ -1,6 +1,10 @@
 .main{
     @include sombras;
-    background-color: $color-claro1;
+    // background-color: $color-claro1;
+    background-color: rgb(250 238 209 / 90%);
+    max-width: 160rem;
+    margin: 0 auto;
+    // width: 95;
     // margin: 0rem 15rem;
     // padding: 1rem 5rem;
     // font-size: 2rem;
@@ -79,11 +83,12 @@
 
         .canalTV{
             @include sombras;
-            background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
+            background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
 
             &:hover{
-                background-color: $color-claro2;
-                background-image: none;
+                @include animacionQuitarSombra;
+                // background-color: $color-claro2;
+                // background-image: none;
                 // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
@@ -98,12 +103,14 @@
 
         .serie{
             @include sombras;
-            background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
+            background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
+            // background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
 
             &:hover{
-                background-color: $color-claro2;
-                background-image: none;
-                // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
+                @include animacionQuitarSombra;
+                // background-color: $color-claro2;
+                // background-image: none;
+                // // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
     }
@@ -116,12 +123,14 @@
 
         .dibujoAnimado{
             @include sombras;
-            background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
+            background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
+            // background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
 
             &:hover{
-                background-color: $color-claro2;
-                background-image: none;
-                // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
+                @include animacionQuitarSombra;
+                // background-color: $color-claro2;
+                // background-image: none;
+                // // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
     }

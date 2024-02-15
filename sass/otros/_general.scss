@@ -39,6 +39,7 @@ html{
 
 body{
     background-color: $color-body;
+    background-image: url(../../medios/images/fondo_dibujos_3.jpg);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -51,13 +52,71 @@ body{
     animation-duration: 2s;
     animation-delay: 0s;
 }
-
 @keyframes animacionLatido {
     0%{transform: scale(1);}
     25%{transform: scale(1.05);}
     50%{transform: scale(1);}
     75%{transform: scale(1.05);}
     100%{transform: scale(1);}
+}
+
+@mixin animacionRotar{
+    animation-name: animacionRotar;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+@keyframes animacionRotar {
+    0%{transform: rotate(0deg);}
+
+    10%{transform: rotate(-5deg);}
+    20%{transform: rotate(-15deg);}
+    25%{transform: rotate(-20deg);}
+    30%{transform: rotate(-15deg);}
+    40%{transform: rotate(-5deg);}
+
+    50%{transform: rotate(0deg);}
+
+    60%{transform: rotate(5deg);}
+    70%{transform: rotate(15deg);}
+    75%{transform: rotate(20deg);}
+    80%{transform: rotate(15deg);}
+    90%{transform: rotate(5deg);}
+
+    100%{transform: rotate(0deg);}
+}
+
+@mixin animacionQuitarSombra{
+    animation-name: animacionQuitarSombra;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+@keyframes animacionQuitarSombra {
+    0%{background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);}
+
+    5%{background-image: linear-gradient(to bottom, $color-claro2 33%, $color-claro1 100%);}
+    10%{background-image: linear-gradient(to bottom, $color-claro2 41%, $color-claro1 100%);}
+    15%{background-image: linear-gradient(to bottom, $color-claro2 49%, $color-claro1 100%);}
+    20%{background-image: linear-gradient(to bottom, $color-claro2 57%, $color-claro1 100%);}
+    25%{background-image: linear-gradient(to bottom, $color-claro2 65%, $color-claro1 100%);}
+    30%{background-image: linear-gradient(to bottom, $color-claro2 73%, $color-claro1 100%);}
+    35%{background-image: linear-gradient(to bottom, $color-claro2 81%, $color-claro1 100%);}
+    40%{background-image: linear-gradient(to bottom, $color-claro2 89%, $color-claro1 100%);}
+    45%{background-image: linear-gradient(to bottom, $color-claro2 97%, $color-claro1 100%);}
+
+    50%{background-image: linear-gradient(to bottom, $color-claro2 100%, $color-claro1 100%);}
+
+    55%{background-image: linear-gradient(to bottom, $color-claro2 97%, $color-claro1 100%);}
+    60%{background-image: linear-gradient(to bottom, $color-claro2 89%, $color-claro1 100%);}
+    65%{background-image: linear-gradient(to bottom, $color-claro2 81%, $color-claro1 100%);}
+    70%{background-image: linear-gradient(to bottom, $color-claro2 73%, $color-claro1 100%);}
+    75%{background-image: linear-gradient(to bottom, $color-claro2 65%, $color-claro1 100%);}
+    80%{background-image: linear-gradient(to bottom, $color-claro2 57%, $color-claro1 100%);}
+    85%{background-image: linear-gradient(to bottom, $color-claro2 49%, $color-claro1 100%);}
+    90%{background-image: linear-gradient(to bottom, $color-claro2 41%, $color-claro1 100%);}
+    95%{background-image: linear-gradient(to bottom, $color-claro2 33%, $color-claro1 100%);}
+    100%{background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);}
 }
 
 // SOMBRAS
