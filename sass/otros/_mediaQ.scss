@@ -179,12 +179,14 @@
             grid-template-columns: 1fr 1fr;
         }
         
+        // Sin las siguientes lineas se rompe el grid
         .contenedorDibujosAnimados div:nth-child(2),
         .contenedorDibujosAnimados div:nth-child(6),
         .contenedorDibujosAnimados div:nth-child(12),
         .contenedorDibujosAnimados div:nth-child(16),
         .contenedorDibujosAnimados div:nth-child(22),
         .contenedorDibujosAnimados div:nth-child(26),
+        .contenedorDibujosAnimados div:nth-child(32),
         .contenedorSeries div:nth-child(2),
         .contenedorSeries div:nth-child(6),
         .contenedorSeries div:nth-child(12),
@@ -192,12 +194,14 @@
             grid-column: auto;
         }
 
+        // Para generar la distribuion de los dibujos animados en tres columnas
         @for $i from 0 through 10 {
             .contenedorDibujosAnimados div:nth-child(#{3 + $i * 3}) {
                 grid-column: 1/3;
             }
         }
 
+        // Para generar la distribuion de las series en tres columnas
         @for $i from 0 through 5 {
             .contenedorSeries div:nth-child(#{3 + $i * 3}) {
                 grid-column: 1/3;
