@@ -1,13 +1,9 @@
 .main{
     @include sombraDeCaja;
-    background-color: rgb(250 238 209 / 80%); //rgb(250, 238, 209) es el $color-claro2 expresado en rgb
+    background-color: rgb(250 238 209 / 80%); //rgb(250, 238, 209) es el $color-claro2 #FAEED1
     max-width: 110rem;
     margin: 0 auto;
     padding: 2rem 2.5rem;
-    // width: 95;
-    // margin: 0rem 15rem;
-    // padding: 1rem 5rem;
-    // font-size: 2rem;
     flex: 1; //Hace que el contenido principal ocupe el espacio restante en la columna
 
     &__h1, &__h2, &__h3, &__h4{
@@ -51,23 +47,13 @@
 
     @mixin contenedorMultimedia_grid{
         display: grid;
-    
-        // grid-template-columns: 1fr 1fr 1fr; //Cuantas columnas son
-        // grid-template-rows: 1fr 1fr; //Cuantas filas son
-    
-        gap: 2rem; //Para dar espacio entre columa y fila del grid
-    
-        justify-content: center; //Para alinear la grilla completa en el eje horizntal
-    
-        //align-content: center; Para alinear la grilla en el eje vertical, el padre tiene que tener un tamaño definido verticalmente
-
+        gap: 2rem;
+        justify-content: center;
         & div{
             display: flex;
             flex-direction: column;
-            //justify-content: center;
             align-items: center;
             text-align: center;
-            // background-color: $color-claro2;
             padding: 1.5rem;
         }
     }
@@ -95,9 +81,6 @@
 
             &:hover{
                 @include animacionDegradado;
-                // background-color: $color-claro2;
-                // background-image: none;
-                // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
     }
@@ -105,20 +88,15 @@
     .contenedorSeries{
         &__video{
             width: 100%;
-            // height: 315px;
             height: 280px;
         }
 
         .serie{
             @include sombraDeCaja;
             background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
-            // background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
 
             &:hover{
                 @include animacionDegradado;
-                // background-color: $color-claro2;
-                // background-image: none;
-                // // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
     }
@@ -131,13 +109,9 @@
         .dibujoAnimado{
             @include sombraDeCaja;
             background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
-            // background-image: linear-gradient(to bottom, $color-claro2 75%, $color-claro1 100%);
 
             &:hover{
                 @include animacionDegradado;
-                // background-color: $color-claro2;
-                // background-image: none;
-                // // transition: transition background-image .5s; No aplica el tiempo indicado, se intendo de varias formas, probar resolverlo con un @Keyframes
             }
         }
     }
@@ -194,29 +168,11 @@
         & form{
             width: 80%;
         }
-
-        // &__img{
-        //     width: 100%;
-        //     margin: 2rem 0rem;
-        // }
     }
-
-
 }
 
 
 .mainIndex{
-    // Andes de hacer cambios
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-
-    // &__img{
-    //     @include sombraDeCaja;
-    //     width: 80rem;
-    // }
-    // ANTES DE MOD
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 2rem;
@@ -232,7 +188,6 @@
         grid-row: 2 / 2;
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
 
         & img{
@@ -270,7 +225,6 @@
 
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
 
         & img{
@@ -286,7 +240,6 @@
 
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
 
         & img{
@@ -295,9 +248,4 @@
             max-width: 100%;
         }
     }
-
-    // &__img{
-    //     @include sombraDeCaja;
-    //     width: 80rem;
-    // }
 }

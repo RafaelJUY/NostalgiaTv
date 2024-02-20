@@ -4,15 +4,13 @@
     background-position: center;
     background-size: cover;
     color: white;
-    // background-color: $color-oscuro1;
-    background-color: rgb(96 114 116 / 95%);
+    background-color: rgb(96 114 116 / 95%); // rgb(96, 114, 116) es el $color-oscuro1: #607274;
     position: sticky;
     top: 0rem;
     z-index: 1000;
 
     .nav{
         font-size: 2rem;
-        // flex: 1; Ocupa todo el espacio disponible en el header
 
         .cabecera{
             height: 8rem;
@@ -29,8 +27,6 @@
 
                 &:hover{
                     @include animacionRotar;
-                    // transform: rotate(-20deg);
-                    // transition: transform .3s;
                 }
             }
     
@@ -52,7 +48,6 @@
 
                 .nav__a{
                     white-space: nowrap;
-                    // margin: 0rem 2rem;
                     color: white;
                     text-shadow: 0px 0px 6px rgba(0,0,0,1);
                     text-decoration: none;

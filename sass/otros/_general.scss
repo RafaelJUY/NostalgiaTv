@@ -18,17 +18,14 @@ $color-oscuro2:#B2A59B;
 $color-claro1: #DED0B6;
 $color-claro2: #FAEED1;
 
-$color-nav: #7B8D8F;
 $color-body: #B4AA99;
 
 $fuente-titulo: 'Rock Salt', cursive;
 $fuente-normal: 'Fira Sans', sans-serif;
 
 // GENERAL
-// html para que manejar "rem" sea mas sencillo
-// 1rem = 10px
 html{
-    font-size: 62.5%;
+    font-size: 62.5%; // 1rem = 10px
 }
 
 *{

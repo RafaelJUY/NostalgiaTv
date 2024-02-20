@@ -1,7 +1,6 @@
 .footer{
     font-family: $fuente-titulo;
-    // background-color: $color-oscuro1;
-    background-color: rgb(96 114 116 / 95%);
+    background-color: rgb(96 114 116 / 95%); // rgb(96, 114, 116) es el $color-oscuro1: #607274;
     color: white;
     display: flex;
     flex-direction: row;
@@ -20,8 +19,6 @@
 
     &__a:hover{
         @include animacionRotar;
-        // transform: rotate(20deg);
-        // transition: transform .3s;
     }
 
     &__p span{
@@ -32,9 +29,4 @@
         width: 44px;
         height: 44px;
     }
-
-    // &__icono{
-    //     width: .1rem;
-    //     height: .1rem;
-    // }
 }
