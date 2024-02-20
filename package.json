@@ -4,7 +4,7 @@
   "description": "pagina web de series y dibujos animados viejos",
   "main": "index.js",
   "scripts": {
-    "sass": "sass sass/style.scss:build/css/style.css"
+    "sass": "sass sass/style.scss:styles/style.css"
   },
   "repository": {
     "type": "git",
