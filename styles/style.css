@@ -16,7 +16,7 @@ html {
 
 body {
   background-color: #B4AA99;
-  background-image: url(../../medios/images/fondo_body_1.jpg);
+  background-image: url(../medios/images/fondo_body_1.jpg);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
