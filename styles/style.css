@@ -259,26 +259,26 @@ body {
   background-color: #B2A59B;
   border-color: #B2A59B;
 }
-.main .contenedorTV, .main .contenedorSeries, .main .contenedorDibujosAnimados {
+.main .contenedorTV, .main .contenedorSeries, .main .contenedorDibujosAnimados, .main .contenedorTienda {
   display: grid;
   gap: 2rem;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.main .contenedorTV div, .main .contenedorSeries div, .main .contenedorDibujosAnimados div {
+.main .contenedorTV div, .main .contenedorSeries div, .main .contenedorDibujosAnimados div, .main .contenedorTienda div {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 1.5rem;
 }
-.main .contenedorTV__logoTV {
+.main .contenedorTV__logoTV, .main .contenedorTienda .productoTienda__imagen {
   height: 18rem;
   width: 20rem;
   padding: 1rem 0rem;
   max-width: 100%;
 }
-.main .contenedorTV__logoTV:hover {
+.main .contenedorTV__logoTV:hover, .main .contenedorTienda .productoTienda__imagen:hover {
   transform: scale(1.1);
   transition: transform 0.3s;
 }
@@ -293,6 +293,70 @@ body {
   animation-iteration-count: 1;
   animation-duration: 1s;
   animation-delay: 0s;
+}
+.main .contenedorTienda .productoTienda {
+  -webkit-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  -moz-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
+}
+.main .contenedorTienda .productoTienda:hover {
+  animation-name: animacionDegradado;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+.main .cabeceraCarrito div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  -moz-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
+}
+.main .cabeceraCarrito div:hover {
+  animation-name: animacionDegradado;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+.main .cabeceraCarrito div p {
+  flex: 0 0 25%;
+  text-align: center;
+}
+.main .total div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  -moz-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
+}
+.main .total div:hover {
+  animation-name: animacionDegradado;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+.main .contenedorCarrito .productoCarrito div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  -moz-box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  box-shadow: 0px 5px 15px 0px rgb(92, 92, 92);
+  background-image: linear-gradient(to bottom, #FAEED1 25%, #DED0B6 100%);
+}
+.main .contenedorCarrito .productoCarrito div:hover {
+  animation-name: animacionDegradado;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+.main .contenedorCarrito .productoCarrito div p {
+  flex: 0 0 25%;
 }
 .main .contenedorSeries__video, .main .contenedorDibujosAnimados__video {
   width: 100%;
@@ -507,7 +571,7 @@ body {
     margin: 1rem 0rem 1rem 0rem;
     font-size: 1.8rem;
   }
-  .main .contenedorTV, .main .contenedorSeries, .main .contenedorDibujosAnimados {
+  .main .contenedorTV, .main .contenedorSeries, .main .contenedorDibujosAnimados, .main .contenedorTienda {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -583,7 +647,7 @@ body {
     margin: 1.5rem 0rem 1rem 0rem;
     font-size: 1.8rem;
   }
-  .main .contenedorTV, .main .contenedorSeries, .main .contenedorDibujosAnimados {
+  .main .contenedorTV, .main .contenedorSeries, .main .contenedorDibujosAnimados, .main .contenedorTienda {
     grid-template-columns: 1fr 1fr;
   }
   .main .contenedorDibujosAnimados div:nth-child(2),

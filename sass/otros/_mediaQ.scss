@@ -43,7 +43,7 @@
             justify-content: center; //Para alinear la grilla completa en el eje horizntal
             align-items: center;
         }
-        .contenedorTV, .contenedorSeries, .contenedorDibujosAnimados{
+        .contenedorTV, .contenedorSeries, .contenedorDibujosAnimados, .contenedorTienda{
             @include contenedorMultimedia_grid();
             grid-template-columns: none;
         }
@@ -147,7 +147,7 @@
         @mixin contenedorMultimedia_grid{
             display: grid;
         }
-        .contenedorTV, .contenedorSeries, .contenedorDibujosAnimados{
+        .contenedorTV, .contenedorSeries, .contenedorDibujosAnimados, .contenedorTienda{
             grid-template-columns: 1fr 1fr;
         }
         

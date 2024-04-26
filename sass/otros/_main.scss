@@ -57,7 +57,7 @@
             padding: 1.5rem;
         }
     }
-    .contenedorTV, .contenedorSeries, .contenedorDibujosAnimados{
+    .contenedorTV, .contenedorSeries, .contenedorDibujosAnimados, .contenedorTienda{
         @include contenedorMultimedia_grid();
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -83,6 +83,68 @@
                 @include animacionDegradado;
             }
         }
+    }
+
+    .contenedorTienda{
+        .productoTienda{
+            @include sombraDeCaja;
+            background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
+
+            &:hover{
+                @include animacionDegradado;
+            }
+        }
+        .productoTienda__imagen{
+            @extend .contenedorTV__logoTV;
+        }
+    }
+
+    .cabeceraCarrito div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include sombraDeCaja;
+        background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
+
+        &:hover{
+            @include animacionDegradado;
+        }
+
+        p {
+            flex: 0 0 25%;
+            text-align: center;
+        }
+    }
+
+    .total div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include sombraDeCaja;
+        background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
+
+        &:hover{
+            @include animacionDegradado;
+        }
+    }
+
+    .contenedorCarrito{
+        .productoCarrito div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include sombraDeCaja;
+            background-image: linear-gradient(to bottom, $color-claro2 25%, $color-claro1 100%);
+
+            &:hover{
+                @include animacionDegradado;
+            }
+
+            p {
+                flex: 0 0 25%;
+            }
+        }
+
     }
 
     .contenedorSeries{
