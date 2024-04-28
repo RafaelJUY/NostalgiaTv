@@ -7,8 +7,8 @@ function mostrarTodosLosProductos() {
     for (const producto of listaProductos) {
         contenedorTienda.innerHTML += `
             <div class="card w-100 rounded-5 productoTienda" data-aos="fade-up" data-aos-duration="300" style="width: 18rem;">
-                <img src="${producto.imagen}" class="card-img-top rounded-5 productoTienda__imagen"
-                         alt="${producto.descripcion}">
+                <img src="${producto.imagen.url}" class="card-img-top rounded-5 productoTienda__imagen"
+                         alt="${producto.imagen.descripcion}">
                 <div class="card-body p-0">
                     <h2 class="card-title main__h2">${producto.nombre}</h2>
                     <p class="card-text main__p"><span>Precio: $ ${producto.precio}</span><br>${producto.descripcion}</p>
