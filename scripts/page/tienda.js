@@ -60,6 +60,8 @@ function btnAgregarAlCarrito() {
             agregarProductoAlCarrito(prodTienda);
             actualizarVistaCarrito();
             actualizarVistaPrecioFinal();
+
+            mostrarCuadroEmergente(`AGREGASTE AL CARRITO\n\n${prodTienda.nombre}\n\n`);
         })
     }
 }
@@ -188,16 +190,29 @@ function btnComprar(){
     btnComprar.addEventListener("click", () =>{
         // Comprobamos si hay elementos agregados al carrito
         if (document.querySelectorAll(".productoCarrito").length === 0){
-            alert("No hay productos en el carrito")
+            mostrarCuadroEmergente("Agregue productos al carrito para poder realizar la compra.", "info");
         } else {
             // Se procede a la compra.
-            alert("Gracias por su compra!");
+            mostrarCuadroEmergente("COMPRA EXITOSA\n\nGracias por realizar su compra!", "success");
             carrito = [];
             limpiarVistaCarrito();
             actualizarVistaPrecioFinal();
             setCarritoLocalStorage();
         }
     })
+}
+
+function mostrarCuadroEmergente(texto, icon = null) {
+    Swal.fire({
+        title: texto,
+        icon: icon,
+        iconColor: "#008B74",
+        background: "#FAEED1",
+        width: "40%",
+        timer: "5000",
+        timerProgressBar: true,
+        confirmButtonColor: "#607274"
+    });
 }
 
 mostrarTodosLosProductos();
