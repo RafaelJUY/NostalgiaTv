@@ -20,7 +20,7 @@ function mostrarTodosLosProductos() {
 }
 
 // Actualiza el HTML de mostrando todos los productos del array carrito
-function actualizarVistaCarrito() {
+/*function actualizarVistaCarrito() {
     const contenedorCarrito = document.querySelector(".contenedorCarrito");
 
     limpiarVistaCarrito();
@@ -38,6 +38,44 @@ function actualizarVistaCarrito() {
             `;
     }
     btnEliminarDelCarrito();
+}*/
+function agregarProductoVistaCarrito(prodTienda) {
+    let existe = false;
+    let elementoProducto;
+
+    // Comprobamos si el producto ya se muestra en el HTML
+    const contenedorProductos = document.querySelectorAll(".productoCarrito");
+    for (const prod of contenedorProductos) {
+        if (parseInt(prod.children[0].lastElementChild.id.split("_")[1]) === prodTienda.id){
+            existe = true;
+            elementoProducto = prod;
+            break;
+        }
+    }
+
+    let prodCarrito = carrito.find(p => p.id === prodTienda.id);
+    // Si el producto existe en el HTML
+    if (existe){
+        // actualizamos la cantidad
+        elementoProducto.children[0].children[1].textContent = prodCarrito.cantidad;
+
+        // Actualizamos subtotal
+        elementoProducto.children[0].children[2].textContent = prodCarrito.subTotal;
+
+    }else {
+        const contenedorCarrito = document.querySelector(".contenedorCarrito");
+        contenedorCarrito.innerHTML += `
+            <div class="card w-100 rounded-5 productoCarrito" data-aos="fade-up" data-aos-duration="300" style="width: 18rem;">
+                <div class="card-body p-0">
+                    <p class="card-text main__p"><span>${prodCarrito.nombre}</span><br></p>
+                    <p class="card-text main__p"><span>1</span><br></p>
+                    <p class="card-text main__p"><span>$ ${prodCarrito.subTotal}</span><br></p>
+                    <button class="btn btn-primary main__btn main__btn--eliminar" id="eliminar_${prodCarrito.id}">Eliminar</button>
+                </div>
+            </div>
+            `;
+        btnEliminarDelCarrito();
+    }
 }
 
 // Borra del HTML todos los productos agregados al carrito.
@@ -58,7 +96,7 @@ function btnAgregarAlCarrito() {
             let prodTienda = listaProductos.find(prod => prod.id === parseInt(boton.id));
 
             agregarProductoAlCarrito(prodTienda);
-            actualizarVistaCarrito();
+            agregarProductoVistaCarrito(prodTienda);
             actualizarVistaPrecioFinal();
 
             mostrarCuadroEmergente(`AGREGASTE AL CARRITO\n\n${prodTienda.nombre}\n\n`);
@@ -72,8 +110,8 @@ function agregarProductoAlCarrito(prodTienda) {
     function agregarProductoRepetido(productoTienda) {
         for (let i = 0; i < carrito.length; i++) {
             if (carrito[i].id === productoTienda.id) {
-                carrito[i].precio += productoTienda.precio;
                 carrito[i].cantidad += 1;
+                carrito[i].subTotal = carrito[i].cantidad * carrito[i].precio;
             }
         }
     }
@@ -98,13 +136,13 @@ function agregarProductoAlCarrito(prodTienda) {
     if (comprobarProductoEnCarrito(prodTienda.id)) {
         agregarProductoRepetido(prodTienda);
     } else {
-        agregarNuevoProductoAlCarrito(new ProductoCarrito(prodTienda.id, prodTienda.nombre, prodTienda.precio, 1));
+        agregarNuevoProductoAlCarrito(new ProductoCarrito(prodTienda.id, prodTienda.nombre, prodTienda.precio, 1, prodTienda.precio));
     }
     setCarritoLocalStorage();
 }
 
 // Funcionalidad para el boton de eliminar del carrito
-function btnEliminarDelCarrito() {
+/*function btnEliminarDelCarrito() {
     const botonesEliminar = document.getElementsByClassName("main__btn--eliminar");
     for (const boton of botonesEliminar) {
         boton.addEventListener("click", () => {
@@ -128,6 +166,61 @@ function btnEliminarDelCarrito() {
             setCarritoLocalStorage();
         })
     }
+}*/
+function btnEliminarDelCarrito() {
+    const botonesEliminar = document.getElementsByClassName("main__btn--eliminar");
+    for (const boton of botonesEliminar) {
+        boton.addEventListener("click", () => {
+            // obtenemos el producto a eliminar segun el id asociado al boton eliminar.
+            let prodCarrito = carrito.find(prod => prod.id === parseInt(boton.id.split("_")[1]));
+
+            eliminarDelCarrito(prodCarrito);
+            eliminarProductoVistaCarrito(prodCarrito);
+
+            // actualizaciones necesarias
+            // actualizarVistaCarrito();
+            actualizarVistaPrecioFinal();
+            // setCarritoLocalStorage();
+        })
+    }
+}
+
+function eliminarDelCarrito(prodCarrito){
+    // Si hay mas de una unidad del producto
+    if (prodCarrito.cantidad > 1) {
+        // decrementamos la cantidad
+        prodCarrito.cantidad -= 1;
+        // calculamos el nuevo subtotal
+        prodCarrito.subTotal = prodCarrito.cantidad * prodCarrito.precio;
+    } else {
+        // Si es la unica unidad eliminamos esa posicion del array.
+        carrito = carrito.filter(prod => prod.id !== prodCarrito.id);
+        console.log("Eliminando producto");
+    }
+    setCarritoLocalStorage();
+}
+
+function eliminarProductoVistaCarrito(prodCarrito){
+    const contenedorProductos = document.querySelectorAll(".productoCarrito");
+    let actualizarProducto = false;
+    if (carrito.some(p => p.id === prodCarrito.id)){
+        actualizarProducto = true; //Como exite en el carrito sabemos que solo hay que actualizar
+    }
+
+    for (const prod of contenedorProductos) {
+        if (parseInt(prod.children[0].lastElementChild.id.split("_")[1]) === prodCarrito.id){
+            if (actualizarProducto){
+                // actualizamos la cantidad
+                prod.children[0].children[1].textContent = prodCarrito.cantidad;
+
+                // Actualizamos subtotal
+                prod.children[0].children[2].textContent = prodCarrito.subTotal;
+            } else {
+                prod.remove();
+            }
+            break;
+        }
+    }
 }
 
 function btnLimpiarCarrito() {
@@ -144,7 +237,7 @@ function btnLimpiarCarrito() {
 function calcularTotal() {
     let total = 0;
     if (carrito.length !== 0) {
-        total = carrito.reduce((total, prod) => total + prod.precio, 0);
+        total = carrito.reduce((total, prod) => total + (prod.precio * prod.cantidad), 0);
     }
     return total;
 }
@@ -159,7 +252,7 @@ function getCarritoLocalStorage() {
     let carritoStorage = JSON.parse(localStorage.getItem("carrito"));
     if (carritoStorage != null) {
         carritoStorage = carritoStorage.map(item => {
-            return new ProductoCarrito(item.data._id, item.data._nombre, item.data._precio, item.data._cantidad);
+            return new ProductoCarrito(item.data._id, item.data._nombre, item.data._precio, item.data._cantidad, item.data._subTotal);
         });
     }
 
@@ -180,7 +273,22 @@ function cargarCarritoGuardado() {
     let carritoStorage = getCarritoLocalStorage();
     if (carritoStorage != null) {
         carrito = carritoStorage;
-        actualizarVistaCarrito();
+
+        for (const prodCarrito of carrito) {
+            const contenedorCarrito = document.querySelector(".contenedorCarrito");
+            contenedorCarrito.innerHTML += `
+            <div class="card w-100 rounded-5 productoCarrito" data-aos="fade-up" data-aos-duration="300" style="width: 18rem;">
+                <div class="card-body p-0">
+                    <p class="card-text main__p"><span>${prodCarrito.nombre}</span><br></p>
+                    <p class="card-text main__p"><span>${prodCarrito.cantidad}</span><br></p>
+                    <p class="card-text main__p"><span>$ ${prodCarrito.subTotal}</span><br></p>
+                    <button class="btn btn-primary main__btn main__btn--eliminar" id="eliminar_${prodCarrito.id}">Eliminar</button>
+                </div>
+            </div>
+            `;
+            btnEliminarDelCarrito();
+        }
+
     }
 }
 
