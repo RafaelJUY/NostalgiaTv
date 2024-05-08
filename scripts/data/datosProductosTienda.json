@@ -1,0 +1,64 @@
+{
+  "listaProductos": [
+    {
+      "id": 1,
+      "nombre": "Remera Bob Esponja",
+      "precio": 30500,
+      "imagen": {
+        "url": "../medios/images/productos/remera-bob-esponja.PNG",
+        "descripcion": "Remera Bob Esponja"
+      },
+      "descripcion": "Lleva contigo la diversión del fondo de bikini con esta colorida remera de Bob Esponja."
+    },
+    {
+      "id": 2,
+      "nombre": "Botella Jovenes Titanes",
+      "precio": 17500,
+      "imagen": {
+        "url": "../medios/images/productos/botella-jovenes-titanes.PNG",
+        "descripcion": "Botella Jovenes Titanes"
+      },
+      "descripcion": "Mantente hidratado con estilo junto a los Jóvenes Titanes con esta práctica botella."
+    },
+    {
+      "id": 3,
+      "nombre": "Funkos Los Padrinos Magicos",
+      "precio": 15000,
+      "imagen": {
+        "url": "../medios/images/productos/funkos-los-padrinos-magicos.PNG",
+        "descripcion": "Funkos Los Padrinos Magicos"
+      },
+      "descripcion": "Agrega magia a tu colección con estos adorables Funkos de Los Padrinos Mágicos."
+    },
+    {
+      "id": 4,
+      "nombre": "Peluche Perry",
+      "precio": 8000,
+      "imagen": {
+        "url": "../medios/images/productos/peluche-perry.PNG",
+        "descripcion": "Peluche Perry"
+      },
+      "descripcion": "Abraza a Perry el Ornitorrinco de la serie Phineas y Ferb con este suave peluche."
+    },
+    {
+      "id": 5,
+      "nombre": "Taza Ben 10",
+      "precio": 5500,
+      "imagen": {
+        "url": "../medios/images/productos/taza-ben10.PNG",
+        "descripcion": "Taza Ben 10"
+      },
+      "descripcion": "Empieza tus mañanas con energía con esta divertida taza inspirada en Ben 10."
+    },
+    {
+      "id": 6,
+      "nombre": "Peluche Gir",
+      "precio": 7500,
+      "imagen": {
+        "url": "../medios/images/productos/peluche-gir.PNG",
+        "descripcion": "Peluche Gir"
+      },
+      "descripcion": "Añade diversión a tu entorno con este peluche de Gir, el robot alienígena de la serie Invader Zim."
+    }
+  ]
+}
