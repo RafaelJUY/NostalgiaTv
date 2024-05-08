@@ -1,7 +1,7 @@
 let carrito = [];
 
 // Carga todos los productos de datosProductosTienda.js en el HTML
-function mostrarTodosLosProductos() {
+/*function mostrarTodosLosProductos() {
     const contenedorTienda = document.querySelector(".contenedorTienda")
 
     for (const producto of listaProductos) {
@@ -16,6 +16,30 @@ function mostrarTodosLosProductos() {
                 </div>
             </div>
             `;
+    }
+}*/
+async function mostrarTodosLosProductos() {
+    const contenedorTienda = document.querySelector(".contenedorTienda");
+
+    try {
+        await consultarProductos(); // Espera a que consultarProductos() termine de ejecutarse y llene listaProductos
+        for (const producto of listaProductos) {
+            contenedorTienda.innerHTML += `
+                <div class="card w-100 rounded-5 productoTienda" data-aos="fade-up" data-aos-duration="300" style="width: 18rem;">
+                    <img src="${producto.imagen.url}" class="card-img-top rounded-5 productoTienda__imagen"
+                             alt="${producto.imagen.descripcion}">
+                    <div class="card-body p-0">
+                        <h2 class="card-title main__h2">${producto.nombre}</h2>
+                        <p class="card-text main__p"><span>Precio: $ ${producto.precio}</span><br>${producto.descripcion}</p>
+                        <button class="btn btn-primary main__btn main__btn--agregarCarrito" id="${producto.id}">Agregar al Carrito</button>
+                    </div>
+                </div>
+                `;
+        }
+        // Una vez que se han agregado los productos al DOM, se llama a la función para agregar eventos a los botones "Agregar al Carrito"
+        btnAgregarAlCarrito();
+    } catch (error) {
+        console.error('Error al cargar productos:', error);
     }
 }
 
@@ -195,7 +219,6 @@ function eliminarDelCarrito(prodCarrito){
     } else {
         // Si es la unica unidad eliminamos esa posicion del array.
         carrito = carrito.filter(prod => prod.id !== prodCarrito.id);
-        console.log("Eliminando producto");
     }
     setCarritoLocalStorage();
 }
@@ -325,7 +348,7 @@ function mostrarCuadroEmergente(texto, icon = null) {
 
 mostrarTodosLosProductos();
 cargarCarritoGuardado();
-btnAgregarAlCarrito();
+// btnAgregarAlCarrito();
 btnLimpiarCarrito();
 btnComprar();
 actualizarVistaPrecioFinal();

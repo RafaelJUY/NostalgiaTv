@@ -1,3 +1,24 @@
+let listaProductos = [];
+
+function convertirJSONaProductosTienda(jsonData) {
+    return jsonData.listaProductos.map((producto) => {
+        const imagen = new Imagen(producto.imagen.url, producto.imagen.descripcion);
+        return new ProductoTienda(producto.id, producto.nombre, producto.precio, imagen, producto.descripcion);
+    });
+}
+
+async function consultarProductos() {
+    const URL = "../scripts/data/datosProductosTienda.json";
+    // const URL = "./scripts/data/datosProductosTienda.json";
+    // const URL = "../datosProductosTienda.json";
+    const respuesta = await fetch(URL);
+    const jsonData = await respuesta.json();
+    listaProductos = convertirJSONaProductosTienda(jsonData);
+}
+
+consultarProductos();
+
+/*
 const listaProductos = [
     new ProductoTienda(
         1,
@@ -35,4 +56,4 @@ const listaProductos = [
         7500,
         new Imagen("../medios/images/productos/peluche-gir.PNG", "Peluche Gir"),
         "Añade diversión a tu entorno con este peluche de Gir, el robot alienígena de la serie Invader Zim.")
-];
+];*/
