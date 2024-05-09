@@ -32,7 +32,7 @@
 
     &__btn{
         width: auto;
-        height: auto;
+        height: 3.5rem;
         margin: 1rem;
         background-color: $color-oscuro1;
         border-color: $color-oscuro1;
@@ -110,9 +110,9 @@
             @include animacionDegradado;
         }
 
-        p {
-            flex: 0 0 25%;
-            text-align: center;
+        p{
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
         }
     }
 
@@ -144,7 +144,6 @@
                 flex: 0 0 25%;
             }
         }
-
     }
 
     .contenedorSeries{

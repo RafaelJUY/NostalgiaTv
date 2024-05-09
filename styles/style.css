@@ -248,7 +248,7 @@ body {
 }
 .main__btn {
   width: auto;
-  height: auto;
+  height: 3.5rem;
   margin: 1rem;
   background-color: #607274;
   border-color: #607274;
@@ -322,8 +322,8 @@ body {
   animation-delay: 0s;
 }
 .main .cabeceraCarrito div p {
-  flex: 0 0 25%;
-  text-align: center;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 .main .total div {
   display: flex;

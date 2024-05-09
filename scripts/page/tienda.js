@@ -1,23 +1,6 @@
 let carrito = [];
 
 // Carga todos los productos de datosProductosTienda.js en el HTML
-/*function mostrarTodosLosProductos() {
-    const contenedorTienda = document.querySelector(".contenedorTienda")
-
-    for (const producto of listaProductos) {
-        contenedorTienda.innerHTML += `
-            <div class="card w-100 rounded-5 productoTienda" data-aos="fade-up" data-aos-duration="300" style="width: 18rem;">
-                <img src="${producto.imagen.url}" class="card-img-top rounded-5 productoTienda__imagen"
-                         alt="${producto.imagen.descripcion}">
-                <div class="card-body p-0">
-                    <h2 class="card-title main__h2">${producto.nombre}</h2>
-                    <p class="card-text main__p"><span>Precio: $ ${producto.precio}</span><br>${producto.descripcion}</p>
-                    <button class="btn btn-primary main__btn main__btn--agregarCarrito" id="${producto.id}">Agregar al Carrito</button>
-                </div>
-            </div>
-            `;
-    }
-}*/
 async function mostrarTodosLosProductos() {
     const contenedorTienda = document.querySelector(".contenedorTienda");
 
@@ -43,61 +26,42 @@ async function mostrarTodosLosProductos() {
     }
 }
 
-// Actualiza el HTML de mostrando todos los productos del array carrito
-/*function actualizarVistaCarrito() {
-    const contenedorCarrito = document.querySelector(".contenedorCarrito");
-
-    limpiarVistaCarrito();
-
-    for (const producto of carrito) {
-        contenedorCarrito.innerHTML += `
-            <div class="card w-100 rounded-5 productoCarrito" data-aos="fade-up" data-aos-duration="300" style="width: 18rem;">
-                <div class="card-body p-0">
-                    <p class="card-text main__p"><span>${producto.nombre}</span><br></p>
-                    <p class="card-text main__p"><span>${producto.cantidad}</span><br></p>
-                    <p class="card-text main__p"><span>$ ${producto.precio}</span><br></p>
-                    <button class="btn btn-primary main__btn main__btn--eliminar" id="eliminar_${producto.id}">Eliminar</button>
-                </div>
-            </div>
-            `;
-    }
-    btnEliminarDelCarrito();
-}*/
+// Agrega productos al HTML del Carrito.
 function agregarProductoVistaCarrito(prodTienda) {
-    let existe = false;
-    let elementoProducto;
+    let elementoProducto = null; // Para capturar el producto si es que existiera en el HTML.
 
     // Comprobamos si el producto ya se muestra en el HTML
     const contenedorProductos = document.querySelectorAll(".productoCarrito");
     for (const prod of contenedorProductos) {
         if (parseInt(prod.children[0].lastElementChild.id.split("_")[1]) === prodTienda.id){
-            existe = true;
             elementoProducto = prod;
             break;
         }
     }
 
+    // Buscamos el objeto ProductoCarrito para tener acceso a la cantidad y subtotal.
     let prodCarrito = carrito.find(p => p.id === prodTienda.id);
-    // Si el producto existe en el HTML
-    if (existe){
+
+    // Si el producto ya existe en el HTML
+    if (elementoProducto != null){
         // actualizamos la cantidad
         elementoProducto.children[0].children[1].textContent = prodCarrito.cantidad;
-
         // Actualizamos subtotal
-        elementoProducto.children[0].children[2].textContent = prodCarrito.subTotal;
-
+        elementoProducto.children[0].children[2].textContent = `$ ${prodCarrito.subTotal}`;
     }else {
+        // Si no existe creamos el HTML
         const contenedorCarrito = document.querySelector(".contenedorCarrito");
         contenedorCarrito.innerHTML += `
             <div class="card w-100 rounded-5 productoCarrito" data-aos="fade-up" data-aos-duration="300" style="width: 18rem;">
                 <div class="card-body p-0">
-                    <p class="card-text main__p"><span>${prodCarrito.nombre}</span><br></p>
-                    <p class="card-text main__p"><span>1</span><br></p>
-                    <p class="card-text main__p"><span>$ ${prodCarrito.subTotal}</span><br></p>
+                    <p class="card-text main__p">${prodCarrito.nombre}<br></p>
+                    <p class="card-text main__p">1<br></p>
+                    <p class="card-text main__p">$ ${prodCarrito.subTotal}<br></p>
                     <button class="btn btn-primary main__btn main__btn--eliminar" id="eliminar_${prodCarrito.id}">Eliminar</button>
                 </div>
             </div>
             `;
+        //Asignamos evento al botón Eliminar
         btnEliminarDelCarrito();
     }
 }
@@ -105,13 +69,12 @@ function agregarProductoVistaCarrito(prodTienda) {
 // Borra del HTML todos los productos agregados al carrito.
 function limpiarVistaCarrito() {
     const contenedorCarrito = document.querySelector(".contenedorCarrito");
-
     contenedorCarrito.innerHTML = "";
 }
 
-// Funcionalidad asociada al boton "Agregar al Carrito"
+// Funcionalidad asociada al botón "Agregar al Carrito"
 function btnAgregarAlCarrito() {
-    // colecciones de todos los botones de agregar al carrito
+    // Colección de todos los botones de agregar al carrito
     const botonesCompra = document.querySelectorAll(".main__btn--agregarCarrito");
 
     for (const boton of botonesCompra) {
@@ -140,7 +103,7 @@ function agregarProductoAlCarrito(prodTienda) {
         }
     }
 
-    // Agregar un producto que no existia en el carrito
+    // Agrega un producto que no existia en el carrito
     function agregarNuevoProductoAlCarrito(productoCarrito) {
         carrito.push(productoCarrito)
     }
@@ -166,45 +129,16 @@ function agregarProductoAlCarrito(prodTienda) {
 }
 
 // Funcionalidad para el boton de eliminar del carrito
-/*function btnEliminarDelCarrito() {
-    const botonesEliminar = document.getElementsByClassName("main__btn--eliminar");
-    for (const boton of botonesEliminar) {
-        boton.addEventListener("click", () => {
-            // obtenemos el producto a eliminar segun el id asociado al boton eliminar.
-            let prodCarrito = carrito.find(prod => prod.id === parseInt(boton.id.split("_")[1]));
-
-            // Si hay mas de una unidad del producto
-            if (prodCarrito.cantidad > 1) {
-                // decrementamos la cantidad
-                prodCarrito.cantidad -= 1;
-                // calculamos el nuevo subtotal
-                prodCarrito.precio = listaProductos.find(prod => prod.id === prodCarrito.id).precio * prodCarrito.cantidad;
-            } else {
-                // Si es la unica unidad eliminamos esa posicion del array.
-                carrito = carrito.filter(prod => prod.id !== prodCarrito.id);
-            }
-
-            // actualizaciones necesarias
-            actualizarVistaCarrito();
-            actualizarVistaPrecioFinal();
-            setCarritoLocalStorage();
-        })
-    }
-}*/
 function btnEliminarDelCarrito() {
     const botonesEliminar = document.getElementsByClassName("main__btn--eliminar");
     for (const boton of botonesEliminar) {
         boton.addEventListener("click", () => {
-            // obtenemos el producto a eliminar segun el id asociado al boton eliminar.
+            // obtenemos el producto a eliminar segun el id asociado al boton eliminar id="eliminar_${prodCarrito.id}.
             let prodCarrito = carrito.find(prod => prod.id === parseInt(boton.id.split("_")[1]));
 
             eliminarDelCarrito(prodCarrito);
             eliminarProductoVistaCarrito(prodCarrito);
-
-            // actualizaciones necesarias
-            // actualizarVistaCarrito();
             actualizarVistaPrecioFinal();
-            // setCarritoLocalStorage();
         })
     }
 }
@@ -217,7 +151,7 @@ function eliminarDelCarrito(prodCarrito){
         // calculamos el nuevo subtotal
         prodCarrito.subTotal = prodCarrito.cantidad * prodCarrito.precio;
     } else {
-        // Si es la unica unidad eliminamos esa posicion del array.
+        // Si es la unica unidad, eliminamos esa posicion del array.
         carrito = carrito.filter(prod => prod.id !== prodCarrito.id);
     }
     setCarritoLocalStorage();
@@ -227,18 +161,19 @@ function eliminarProductoVistaCarrito(prodCarrito){
     const contenedorProductos = document.querySelectorAll(".productoCarrito");
     let actualizarProducto = false;
     if (carrito.some(p => p.id === prodCarrito.id)){
-        actualizarProducto = true; //Como exite en el carrito sabemos que solo hay que actualizar
+        actualizarProducto = true; //Como exite en el array carrito solo hay que actualizar el HTML
     }
 
     for (const prod of contenedorProductos) {
+        // Buscamos el elemento a actualizar por id.
         if (parseInt(prod.children[0].lastElementChild.id.split("_")[1]) === prodCarrito.id){
             if (actualizarProducto){
                 // actualizamos la cantidad
                 prod.children[0].children[1].textContent = prodCarrito.cantidad;
-
                 // Actualizamos subtotal
-                prod.children[0].children[2].textContent = prodCarrito.subTotal;
+                prod.children[0].children[2].textContent = `$ ${prodCarrito.subTotal}`;
             } else {
+                // El producto no existe en el array carrito, se remueve del HTML.
                 prod.remove();
             }
             break;
@@ -246,6 +181,7 @@ function eliminarProductoVistaCarrito(prodCarrito){
     }
 }
 
+// Funcionalidad asociada al botón Limpiar Carrito
 function btnLimpiarCarrito() {
     const btnLimpiar = document.getElementById("btnLimpiar");
 
@@ -257,6 +193,7 @@ function btnLimpiarCarrito() {
     })
 }
 
+// Calcular el precio final de la compra.
 function calcularTotal() {
     let total = 0;
     if (carrito.length !== 0) {
@@ -264,13 +201,14 @@ function calcularTotal() {
     }
     return total;
 }
+
 //Actualiza la vista HTML del precio final de la compra
 function actualizarVistaPrecioFinal() {
     const vistaTotal = document.getElementById("precioFinal");
     vistaTotal.textContent = `$ ${calcularTotal()}`;
 }
 
-// Obtener del LocalStorage el carrito de productos
+// Obtener del LocalStorage el carrito de productos como un array de ProductoCarrito.
 function getCarritoLocalStorage() {
     let carritoStorage = JSON.parse(localStorage.getItem("carrito"));
     if (carritoStorage != null) {
@@ -302,16 +240,15 @@ function cargarCarritoGuardado() {
             contenedorCarrito.innerHTML += `
             <div class="card w-100 rounded-5 productoCarrito" data-aos="fade-up" data-aos-duration="300" style="width: 18rem;">
                 <div class="card-body p-0">
-                    <p class="card-text main__p"><span>${prodCarrito.nombre}</span><br></p>
-                    <p class="card-text main__p"><span>${prodCarrito.cantidad}</span><br></p>
-                    <p class="card-text main__p"><span>$ ${prodCarrito.subTotal}</span><br></p>
+                    <p class="card-text main__p">${prodCarrito.nombre}<br></p>
+                    <p class="card-text main__p">${prodCarrito.cantidad}<br></p>
+                    <p class="card-text main__p">$ ${prodCarrito.subTotal}<br></p>
                     <button class="btn btn-primary main__btn main__btn--eliminar" id="eliminar_${prodCarrito.id}">Eliminar</button>
                 </div>
             </div>
             `;
             btnEliminarDelCarrito();
         }
-
     }
 }
 
@@ -333,6 +270,7 @@ function btnComprar(){
     })
 }
 
+// Crea y muestra cuadros emergentes.
 function mostrarCuadroEmergente(texto, icon = null) {
     Swal.fire({
         title: texto,
@@ -348,7 +286,6 @@ function mostrarCuadroEmergente(texto, icon = null) {
 
 mostrarTodosLosProductos();
 cargarCarritoGuardado();
-// btnAgregarAlCarrito();
 btnLimpiarCarrito();
 btnComprar();
 actualizarVistaPrecioFinal();

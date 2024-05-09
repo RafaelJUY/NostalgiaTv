@@ -170,5 +170,3 @@ const datosSeries = [
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen loading="lazy"></iframe>`)
 ];
-
-// nombre, descripcion, fechaDesde, fechaHasta, iframe
